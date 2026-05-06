@@ -9,6 +9,7 @@ import {
   TrendingUp, TrendingDown, AlertTriangle, Calendar,
   CheckCircle2, AlertCircle, Lightbulb, Zap, Users,
   Eye, X, ChevronLeft, ChevronRight, Search, Activity, Sparkles,
+  Lock, LogOut,
 } from 'lucide-react';
 
 import {
@@ -72,7 +73,7 @@ const Logo = ({ size = 40 }) => (
   </svg>
 );
 
-const Sidebar = ({ active, setActive }) => {
+const Sidebar = ({ active, setActive, onLogout }) => {
   const items = [
     { id: 'dashboard', label: "Vue d'ensemble", icon: LayoutDashboard },
     { id: 'portails', label: 'Portails', icon: Building2 },
@@ -117,13 +118,24 @@ const Sidebar = ({ active, setActive }) => {
           );
         })}
       </nav>
-      <div className="px-6 py-5 border-t text-xs" style={{ borderColor: COLORS.border, color: COLORS.muted }}>
+      <div className="px-6 py-4 border-t text-xs" style={{ borderColor: COLORS.border, color: COLORS.muted }}>
         <div className="flex items-center gap-2 mb-1">
           <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: COLORS.primary }} />
           Données depuis Notion
         </div>
         {SYNCED_AT && (
-          <div>Sync : {new Date(SYNCED_AT).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}</div>
+          <div className="mb-3">Sync : {new Date(SYNCED_AT).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}</div>
+        )}
+        {onLogout && (
+          <button
+            onClick={onLogout}
+            className="w-full inline-flex items-center justify-center gap-2 rounded-md py-1.5 text-[11px] hover:bg-white/5 transition-colors"
+            style={{ border: `1px solid ${COLORS.border}`, color: COLORS.muted, fontFamily: 'Manrope, sans-serif' }}
+            title="Se déconnecter"
+          >
+            <LogOut size={11} />
+            Déconnexion
+          </button>
         )}
       </div>
     </aside>
@@ -2149,9 +2161,105 @@ const ClientsPage = () => {
 };
 
 /* =========================================================================
+   LOGIN
+   ========================================================================= */
+// ⚠ Protection cosmétique uniquement : le mot de passe est dans le source
+// (visible par n'importe qui via les devtools / GitHub). Pour une vraie
+// auth il faudra une couche backend.
+const APP_PASSWORD = 'test';
+
+const LoginScreen = ({ onSuccess }) => {
+  const [pwd, setPwd] = useState('');
+  const [error, setError] = useState(false);
+
+  const submit = (e) => {
+    e.preventDefault();
+    if (pwd === APP_PASSWORD) {
+      onSuccess();
+    } else {
+      setError(true);
+      setPwd('');
+    }
+  };
+
+  return (
+    <div
+      className="h-screen flex items-center justify-center px-4"
+      style={{ background: COLORS.bg, color: COLORS.text, fontFamily: 'Manrope, sans-serif' }}
+    >
+      <div
+        className="w-full max-w-sm rounded-xl p-7"
+        style={{
+          background: COLORS.surface,
+          border: `1px solid ${COLORS.primary}55`,
+          boxShadow: `0 0 0 1px ${COLORS.primary}11, 0 30px 80px rgba(0,0,0,0.6), 0 0 60px ${COLORS.primary}22`,
+        }}
+      >
+        <div className="flex items-center gap-3 mb-6">
+          <Logo size={42} />
+          <div>
+            <div style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 800, letterSpacing: '-0.02em', fontSize: 22 }}>
+              ctoutvert
+            </div>
+            <div className="text-[10px] uppercase tracking-widest" style={{ color: COLORS.primary }}>
+              Cockpit Saison 26
+            </div>
+          </div>
+        </div>
+
+        <form onSubmit={submit}>
+          <label className="text-[10px] uppercase tracking-widest mb-2 flex items-center gap-1.5" style={{ color: COLORS.muted }}>
+            <Lock size={11} />
+            Mot de passe
+          </label>
+          <input
+            type="password"
+            value={pwd}
+            onChange={(e) => { setPwd(e.target.value); setError(false); }}
+            autoFocus
+            placeholder="••••"
+            className="w-full rounded-md px-3 py-2.5 text-sm outline-none transition-colors"
+            style={{
+              background: COLORS.surface2,
+              border: `1px solid ${error ? COLORS.bad : COLORS.border}`,
+              color: COLORS.text,
+              fontFamily: 'JetBrains Mono, monospace',
+            }}
+          />
+          {error && (
+            <div className="text-[11px] mt-2 flex items-center gap-1.5" style={{ color: COLORS.bad }}>
+              <AlertCircle size={12} />
+              Mot de passe incorrect
+            </div>
+          )}
+          <button
+            type="submit"
+            className="w-full mt-4 rounded-md py-2.5 text-sm font-bold transition-opacity hover:opacity-90"
+            style={{ background: COLORS.primary, color: '#000', fontFamily: 'Manrope, sans-serif' }}
+          >
+            Se connecter
+          </button>
+        </form>
+
+        <div className="text-[10px] mt-5 pt-4 border-t text-center" style={{ borderColor: COLORS.border, color: COLORS.muted }}>
+          Accès restreint · Données saison 2026 Inaxel
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/* =========================================================================
    APP
    ========================================================================= */
 export default function App() {
+  const [authed, setAuthed] = useState(() => {
+    try {
+      return sessionStorage.getItem('cockpit-auth') === 'ok';
+    } catch {
+      return false;
+    }
+  });
   const [active, setActive] = useState('dashboard');
   const [month, setMonth] = useState('avril');
 
@@ -2161,6 +2269,22 @@ export default function App() {
     link.rel = 'stylesheet';
     document.head.appendChild(link);
   }, []);
+
+  if (!authed) {
+    return (
+      <LoginScreen
+        onSuccess={() => {
+          try { sessionStorage.setItem('cockpit-auth', 'ok'); } catch (_) {}
+          setAuthed(true);
+        }}
+      />
+    );
+  }
+
+  const logout = () => {
+    try { sessionStorage.removeItem('cockpit-auth'); } catch (_) {}
+    setAuthed(false);
+  };
 
   const PAGES = {
     dashboard: { title: "Vue d'ensemble", subtitle: 'Saison 2026 — pilotage consolidé', component: DashboardPage },
@@ -2176,7 +2300,7 @@ export default function App() {
 
   return (
     <div className="flex h-screen overflow-hidden" style={{ background: COLORS.bg, color: COLORS.text, fontFamily: 'Manrope, sans-serif' }}>
-      <Sidebar active={active} setActive={setActive} />
+      <Sidebar active={active} setActive={setActive} onLogout={logout} />
       <main className="flex-1 flex flex-col overflow-hidden" style={{ background: COLORS.bg }}>
         <Header pageTitle={PAGES[active].title} pageSubtitle={PAGES[active].subtitle} month={month} setMonth={setMonth} />
         <div className="flex-1 overflow-hidden px-6 py-3">
