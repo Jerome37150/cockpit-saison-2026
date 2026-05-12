@@ -1,0 +1,134 @@
+{
+  "syncedAt": "2026-05-06T16:25:00.000Z",
+  "_about": "Réservations & CA depuis backoffice Inaxel (CSV déposé par l'agent IA). Split Directe / Apporteur / Total.",
+  "rows": [
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "typePeriode": "Réel",
+      "typeReservation": "Directe",
+      "ca": 120513,
+      "volumeResa": 151
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "typePeriode": "Réel",
+      "typeReservation": "Directe",
+      "ca": 87890,
+      "volumeResa": 126
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "typePeriode": "Réel",
+      "typeReservation": "Directe",
+      "ca": 112069.8,
+      "volumeResa": 200
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "typePeriode": "Réel",
+      "typeReservation": "Directe",
+      "ca": 103212,
+      "volumeResa": 225
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "typePeriode": "Réel",
+      "typeReservation": "Apporteur",
+      "ca": 780156,
+      "volumeResa": 985
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "typePeriode": "Réel",
+      "typeReservation": "Apporteur",
+      "ca": 736652,
+      "volumeResa": 982
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "typePeriode": "Réel",
+      "typeReservation": "Apporteur",
+      "ca": 775803,
+      "volumeResa": 1110
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "typePeriode": "Réel",
+      "typeReservation": "Apporteur",
+      "ca": 696003,
+      "volumeResa": 1205
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "typePeriode": "N-1",
+      "typeReservation": "Directe",
+      "ca": 115702.8,
+      "volumeResa": 144
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "typePeriode": "N-1",
+      "typeReservation": "Directe",
+      "ca": 134952.7,
+      "volumeResa": 173
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "typePeriode": "N-1",
+      "typeReservation": "Directe",
+      "ca": 146928.4,
+      "volumeResa": 248
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "typePeriode": "N-1",
+      "typeReservation": "Directe",
+      "ca": 131068.3,
+      "volumeResa": 302
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "typePeriode": "N-1",
+      "typeReservation": "Apporteur",
+      "ca": 482166,
+      "volumeResa": 615
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "typePeriode": "N-1",
+      "typeReservation": "Apporteur",
+      "ca": 484132.8,
+      "volumeResa": 638
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "typePeriode": "N-1",
+      "typeReservation": "Apporteur",
+      "ca": 512187,
+      "volumeResa": 805
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "typePeriode": "N-1",
+      "typeReservation": "Apporteur",
+      "ca": 583041.1,
+      "volumeResa": 1214
+    }
+  ]
+}

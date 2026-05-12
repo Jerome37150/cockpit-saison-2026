@@ -7,16 +7,19 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "sync-notion": "node scripts/sync-notion.mjs"
+    "sync-piano": "node scripts/sync-piano.mjs",
+    "sync-gsc": "node scripts/sync-gsc.mjs",
+    "ingest-csv": "node scripts/ingest-csv.mjs"
   },
   "dependencies": {
+    "googleapis": "^171.4.0",
     "lucide-react": "^0.383.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "recharts": "^2.12.7"
+    "recharts": "^2.12.7",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@notionhq/client": "^2.2.15",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",

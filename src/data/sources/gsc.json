@@ -1,0 +1,66 @@
+{
+  "syncedAt": "2026-05-06T16:25:00.000Z",
+  "_about": "Google Search Console — sert UNIQUEMENT au panneau SEO_MARCHES (snapshot positions par marché). Pour le trafic SEO et clickouts, voir piano.json. ⚠️ `volumeRech` n'est pas exposé par GSC : à alimenter via tracker tiers (Semrush / SE Ranking) ou retirer du cockpit.",
+  "perMarket": [
+    {
+      "marche": "FR",
+      "snapshotDate": "2026-04-30",
+      "kw": 12126,
+      "volumeRech": 3983660,
+      "top3": 1938,
+      "top4_10": 4123,
+      "page2": 918,
+      "nonClasse": 5147
+    },
+    {
+      "marche": "EN",
+      "snapshotDate": "2026-04-30",
+      "kw": 1905,
+      "volumeRech": 191220,
+      "top3": 169,
+      "top4_10": 310,
+      "page2": 1027,
+      "nonClasse": 396
+    },
+    {
+      "marche": "NL",
+      "snapshotDate": "2026-04-30",
+      "kw": 2926,
+      "volumeRech": 618710,
+      "top3": 192,
+      "top4_10": 1096,
+      "page2": 276,
+      "nonClasse": 1362
+    },
+    {
+      "marche": "IT",
+      "snapshotDate": "2026-04-30",
+      "kw": 626,
+      "volumeRech": 164300,
+      "top3": 251,
+      "top4_10": 191,
+      "page2": 9,
+      "nonClasse": 175
+    },
+    {
+      "marche": "DE",
+      "snapshotDate": "2026-04-30",
+      "kw": 3848,
+      "volumeRech": 797530,
+      "top3": 479,
+      "top4_10": 1359,
+      "page2": 358,
+      "nonClasse": 1652
+    },
+    {
+      "marche": "ES",
+      "snapshotDate": "2026-04-30",
+      "kw": 2448,
+      "volumeRech": 365320,
+      "top3": 986,
+      "top4_10": 644,
+      "page2": 34,
+      "nonClasse": 784
+    }
+  ]
+}

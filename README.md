@@ -15,65 +15,61 @@ npm run build        # build de production
 npm run preview      # preview du build
 ```
 
+## État du projet
+
+Phase de **maquettes** : les données affichées sont fictives mais déjà au
+format cible (Piano + GSC + CSV Inaxel). Les connexions aux vraies sources
+seront branchées une fois les maquettes validées — la structure n'a pas
+besoin de bouger.
+
 ## Architecture data
 
-**Source unique : la page Notion [« Cockpit Saison 2026 »](https://www.notion.so/3588db15623a81e79971cc2400614efc).**
-Aucune donnée n'est en dur dans le code.
-
 ```
-Notion  →  src/data/cockpit-2026.notion.json  →  src/data/cockpit.js  →  React
-            (rows brutes,                        (agrégation par mois,
-             output du sync)                      par portail, par levier…)
-```
-
-- `src/data/cockpit-2026.notion.json` : dump brut des 7 bases Notion (1 ligne = 1 enregistrement). Régénéré par le script de sync.
-- `src/data/cockpit.js` : transforme les rows brutes vers les structures consommées par les composants UI (`GLOBAL`, `PORTAILS`, `CANAUX`, `SEA_PERF`, etc.).
-- `src/cockpit-saison-2026.jsx` : la UI, ne fait que consommer `cockpit.js`.
-
-## Mise à jour des données depuis Notion
-
-### Pré-requis (à faire une fois)
-
-1. **Créer une intégration Notion** : <https://www.notion.so/profile/integrations> → "New integration" → choisir le workspace Inaxel → copier le secret (`secret_…`).
-2. **Partager les 7 bases avec l'intégration** : ouvrir la page « Cockpit Saison 2026 » dans Notion → menu `…` → `Connections` → ajouter l'intégration créée. Les 7 sous-bases héritent de la permission.
-3. **Créer un fichier `.env` à la racine** :
-
-   ```
-   NOTION_TOKEN=secret_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-   ```
-   ⚠️ Ce fichier est git-ignoré. Ne jamais le commiter.
-
-### Lancer une synchronisation
-
-```bash
-npm run sync-notion
+src/data/
+├── sources/                  Données brutes normalisées (1 fichier par origine)
+│   ├── piano.json            ← scripts/sync-piano.mjs
+│   ├── gsc.json              ← scripts/sync-gsc.mjs
+│   └── inaxel/               ← scripts/ingest-csv.mjs (CSV → JSON)
+│       ├── reservations.json
+│       ├── sea.json
+│       ├── crm.json
+│       ├── budget.json
+│       └── clients.json
+├── shared/
+│   ├── constants.js          Mois, codes portails / canaux, palettes
+│   ├── helpers.js            sumByMonth, safeDiv, sumDirAndApp, ...
+│   └── schemas.js            Validation Zod par source (build échoue si dérive)
+├── aggregators/              Un module par section UI
+│   ├── global.js             GLOBAL · GLOBAL_N1 · GLOBAL_OBJ
+│   ├── portails.js           PORTAILS · PORTAIL_ORIGINE
+│   ├── canaux.js             CANAUX
+│   ├── seo.js                SEO_PERF · SEO_MARCHES · SEO_PER_PORTAIL
+│   ├── sea.js                SEA_PERF · SEA_PAYS · SEA_CAMPAGNES
+│   ├── crm.js                CRM_BASE · CRM_NL · CRM_LANGUE · CRM_CAMPAGNES
+│   ├── budget.js             BUDGET_LEVIERS · CA_PRODUITS · CAMPINGS
+│   ├── clients.js            CLIENTS
+│   └── meta.js               SYNCED_AT · SYNCED_AT_BY_SOURCE
+└── index.js                  Façade : la UI importe tout depuis ici
 ```
 
-Le script `scripts/sync-notion.mjs` :
-1. Lit le token dans `.env`
-2. Pagine les 7 bases Notion
-3. Extrait les properties → écrit `src/data/cockpit-2026.notion.json`
-4. Le `syncedAt` (timestamp) est mis à jour automatiquement et affiché en pied de page
-
-Le hot-reload Vite recharge le dashboard immédiatement.
-
-## Structure du projet
-
+La UI consomme uniquement la façade :
+```js
+import { GLOBAL, PORTAILS, SEO_PERF, ... } from './data';
 ```
-src/
-├── cockpit-saison-2026.jsx       UI (composants React + pages)
-├── main.jsx                      Point d'entrée React
-├── index.css                     Tailwind + styles globaux
-└── data/
-    ├── cockpit.js                Module d'agrégation (Notion → structures UI)
-    └── cockpit-2026.notion.json  Dump brut des 7 bases Notion (240 rows)
 
-scripts/
-└── sync-notion.mjs               Script de synchronisation Notion → JSON
+## Comment les données arrivent
 
-public/favicon.svg
-index.html · package.json · vite.config.js · tailwind.config.js · postcss.config.js
-```
+| Source | Mécanisme | Script | Doc |
+|---|---|---|---|
+| Piano Analytics | API Data Query | `npm run sync-piano` | [docs/sources-piano.md](docs/sources-piano.md) |
+| Google Search Console | API Search Analytics | `npm run sync-gsc` | [docs/sources-gsc.md](docs/sources-gsc.md) |
+| Outils internes Inaxel | CSV déposés par l'agent IA dans `raw-csv/inaxel/` | `npm run ingest-csv` | [docs/sources-csv-inaxel.md](docs/sources-csv-inaxel.md) |
+
+Les scripts `sync-*` et `ingest-csv` sont les **stubs documentés** : prêts à être branchés au go-live, ils définissent le contrat (variables d'env, colonnes attendues) mais n'appellent pas encore les APIs.
+
+## Validation
+
+Chaque aggregator valide sa source via Zod ([`src/data/shared/schemas.js`](src/data/shared/schemas.js)) au chargement. Le build échoue avec un message explicite si une source ne respecte pas son schéma — protège le dashboard contre les dérives silencieuses côté sync.
 
 ## Stack technique
 
@@ -81,18 +77,31 @@ index.html · package.json · vite.config.js · tailwind.config.js · postcss.co
 - **Tailwind CSS 3**
 - **Recharts** (graphiques)
 - **Lucide React** (icônes)
-- **@notionhq/client** (sync, devDep)
+- **Zod 4** (validation des sources)
 
-## Bases Notion mappées
+## Sections UI ↔ aggregators ↔ sources
 
-| Base Notion | Section UI |
-|---|---|
-| 📈 Trafic & Clickouts par portail | Vue d'ensemble · Portails |
-| 🛒 Réservations & CA | Vue d'ensemble · Commercial |
-| 🌐 Acquisition par canal | Vue d'ensemble (mix canaux) |
-| 🎯 SEA & Pays cible | SEA |
-| 🔍 SEO Performance & Marchés | SEO |
-| ✉️ CRM & Newsletter | CRM |
-| 💰 Budget & Commercial | Budget · Commercial |
+| Section UI | Aggregator | Sources |
+|---|---|---|
+| Vue d'ensemble | `global`, `portails`, `canaux` | piano + inaxel/reservations |
+| Portails | `portails` | piano |
+| SEO | `seo` | piano + gsc |
+| SEA | `sea` | piano + inaxel/sea |
+| CRM | `crm` | inaxel/crm |
+| Budget · Commercial | `budget`, `clients` | inaxel/budget + inaxel/clients |
 
-Ce qui n'est pas dans Notion ne s'affiche pas. Pour ajouter une donnée : créer la colonne / la row dans Notion, étendre le mapping dans `scripts/sync-notion.mjs` puis l'agrégation dans `src/data/cockpit.js`.
+## Déploiement
+
+GitHub Pages : push sur `main` déclenche
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) qui build
+et publie sur <https://jerome37150.github.io/cockpit-saison-2026/>.
+
+Protection front : mot de passe en JS (cosmétique — le bundle JS contient
+les données en clair). À renforcer si la confidentialité devient critique.
+
+## Points en attente (à confirmer avec Inaxel avant le branchement réel)
+
+- Tagging Piano : event `clickout` sur tous les portails ? Canal "IA Générative" configuré (bucketing referrers IA) ?
+- Granularité Piano : 1 property par portail ou property unique avec dimension `site` ?
+- Outil de keyword tracking : on alimente `volumeRech` via Semrush/SE Ranking, ou on retire ce champ du cockpit ?
+- Backoffice Inaxel : split Directe / Apporteur disponible côté résa ? Granularité mensuelle disponible pour le budget par levier ?

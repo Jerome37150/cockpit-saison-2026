@@ -12,9 +12,14 @@ dist
 dist-ssr
 *.local
 
-# Notion sync — secret
+# Secrets (Piano API, GSC service account, etc.)
 .env
 .env.local
+gsc-service-account*.json
+*-service-account*.json
+
+# CSV bruts déposés par l'agent IA — seuls les JSON dérivés sont versionnés
+raw-csv/
 
 # Editor
 .vscode/*

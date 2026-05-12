@@ -23,7 +23,7 @@ import {
   BUDGET_LEVIERS, CA_PRODUITS, CAMPINGS,
   CLIENTS,
   SYNCED_AT,
-} from './data/cockpit';
+} from './data';
 
 /* =========================================================================
    HELPERS DE FORMATAGE
@@ -243,11 +243,12 @@ const Modal = ({ open, onClose, title, subtitle, children }) => {
       onClick={onClose}
     >
       <div
-        className="rounded-xl flex flex-col w-full max-w-4xl"
+        className="rounded-xl flex flex-col w-full"
         style={{
           background: '#1A1A1A',
           border: `1px solid ${COLORS.primary}66`,
           boxShadow: `0 20px 60px rgba(0,0,0,0.6), 0 0 0 1px ${COLORS.primary}22, 0 0 40px ${COLORS.primary}22`,
+          maxWidth: 800,
           maxHeight: '85vh',
         }}
         onClick={(e) => e.stopPropagation()}
@@ -2303,8 +2304,13 @@ export default function App() {
       <Sidebar active={active} setActive={setActive} onLogout={logout} />
       <main className="flex-1 flex flex-col overflow-hidden" style={{ background: COLORS.bg }}>
         <Header pageTitle={PAGES[active].title} pageSubtitle={PAGES[active].subtitle} month={month} setMonth={setMonth} />
-        <div className="flex-1 overflow-hidden px-6 py-3">
-          <PageComponent month={month} />
+        <div className="flex-1 overflow-hidden px-6 py-3 flex justify-center">
+          <div
+            className="w-full h-full overflow-hidden rounded-xl p-3"
+            style={{ maxWidth: 1300, border: `1px solid ${COLORS.border}` }}
+          >
+            <PageComponent month={month} />
+          </div>
         </div>
         <footer className="px-6 py-2 border-t text-[11px] flex justify-between flex-shrink-0" style={{ borderColor: COLORS.border, color: COLORS.muted }}>
           <span>Source unique : page Notion « Cockpit Saison 2026 »</span>
