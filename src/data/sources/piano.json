@@ -1,0 +1,2048 @@
+{
+  "syncedAt": "2026-05-12T06:52:40.352Z",
+  "_about": "Piano Analytics — généré par scripts/sync-piano.mjs",
+  "perPortail": [
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "AC",
+      "type": "Réel",
+      "trafic": 1712,
+      "clickouts": 492,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "AC",
+      "type": "Réel",
+      "trafic": 1304,
+      "clickouts": 449,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "AC",
+      "type": "Réel",
+      "trafic": 1822,
+      "clickouts": 544,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "AC",
+      "type": "Réel",
+      "trafic": 1585,
+      "clickouts": 450,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "C2B",
+      "type": "Réel",
+      "trafic": 13840,
+      "clickouts": 1040,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "C2B",
+      "type": "Réel",
+      "trafic": 13500,
+      "clickouts": 930,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "C2B",
+      "type": "Réel",
+      "trafic": 18128,
+      "clickouts": 1145,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "C2B",
+      "type": "Réel",
+      "trafic": 27254,
+      "clickouts": 1456,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "CD",
+      "type": "Réel",
+      "trafic": 274787,
+      "clickouts": 178416,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "CD",
+      "type": "Réel",
+      "trafic": 292094,
+      "clickouts": 182183,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "CD",
+      "type": "Réel",
+      "trafic": 337587,
+      "clickouts": 199762,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "CD",
+      "type": "Réel",
+      "trafic": 352340,
+      "clickouts": 203264,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "CSV",
+      "type": "Réel",
+      "trafic": 10425,
+      "clickouts": 1238,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "CSV",
+      "type": "Réel",
+      "trafic": 10668,
+      "clickouts": 1255,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "CSV",
+      "type": "Réel",
+      "trafic": 10860,
+      "clickouts": 1156,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "CSV",
+      "type": "Réel",
+      "trafic": 12934,
+      "clickouts": 1423,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "IB",
+      "type": "Réel",
+      "trafic": 3998,
+      "clickouts": 1094,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "IB",
+      "type": "Réel",
+      "trafic": 4378,
+      "clickouts": 1287,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "IB",
+      "type": "Réel",
+      "trafic": 6344,
+      "clickouts": 1667,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "IB",
+      "type": "Réel",
+      "trafic": 6486,
+      "clickouts": 1828,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "MC",
+      "type": "Réel",
+      "trafic": 9555,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "MC",
+      "type": "Réel",
+      "trafic": 6399,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "MC",
+      "type": "Réel",
+      "trafic": 7367,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "MC",
+      "type": "Réel",
+      "trafic": 6801,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "UC",
+      "type": "Réel",
+      "trafic": 32508,
+      "clickouts": 11594,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "UC",
+      "type": "Réel",
+      "trafic": 33718,
+      "clickouts": 9809,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "UC",
+      "type": "Réel",
+      "trafic": 43250,
+      "clickouts": 12516,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "UC",
+      "type": "Réel",
+      "trafic": 48937,
+      "clickouts": 14604,
+      "origine": "Réel"
+    }
+  ],
+  "byChannel": [
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "canal": "Direct",
+      "typePeriode": "Réel",
+      "trafic": 78296
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "canal": "IA Générative",
+      "typePeriode": "Réel",
+      "trafic": 1716
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "canal": "Referral",
+      "typePeriode": "Réel",
+      "trafic": 2458
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "canal": "SEA",
+      "typePeriode": "Réel",
+      "trafic": 116997
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "canal": "SEO",
+      "typePeriode": "Réel",
+      "trafic": 144348
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "canal": "Social Media",
+      "typePeriode": "Réel",
+      "trafic": 1847
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "canal": "Direct",
+      "typePeriode": "Réel",
+      "trafic": 82270
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "canal": "IA Générative",
+      "typePeriode": "Réel",
+      "trafic": 1617
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "canal": "Referral",
+      "typePeriode": "Réel",
+      "trafic": 7346
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "canal": "SEA",
+      "typePeriode": "Réel",
+      "trafic": 135631
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "canal": "SEO",
+      "typePeriode": "Réel",
+      "trafic": 131992
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "canal": "Social Media",
+      "typePeriode": "Réel",
+      "trafic": 1942
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "canal": "CRM",
+      "typePeriode": "Réel",
+      "trafic": 0
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "canal": "Direct",
+      "typePeriode": "Réel",
+      "trafic": 99106
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "canal": "IA Générative",
+      "typePeriode": "Réel",
+      "trafic": 1490
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "canal": "Referral",
+      "typePeriode": "Réel",
+      "trafic": 10998
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "canal": "SEA",
+      "typePeriode": "Réel",
+      "trafic": 145721
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "canal": "SEO",
+      "typePeriode": "Réel",
+      "trafic": 162949
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "canal": "Social Media",
+      "typePeriode": "Réel",
+      "trafic": 3521
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "canal": "CRM",
+      "typePeriode": "Réel",
+      "trafic": 1605
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "canal": "Direct",
+      "typePeriode": "Réel",
+      "trafic": 56691
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "canal": "IA Générative",
+      "typePeriode": "Réel",
+      "trafic": 1401
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "canal": "Referral",
+      "typePeriode": "Réel",
+      "trafic": 13180
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "canal": "SEA",
+      "typePeriode": "Réel",
+      "trafic": 171482
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "canal": "SEO",
+      "typePeriode": "Réel",
+      "trafic": 208132
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "canal": "Social Media",
+      "typePeriode": "Réel",
+      "trafic": 2422
+    }
+  ],
+  "seoMonthly": [
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 144348,
+      "clickouts": 77938
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 131992,
+      "clickouts": 64598
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 162949,
+      "clickouts": 76068
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 208132,
+      "clickouts": 91196
+    }
+  ],
+  "seoPerPortail": [
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "AC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 1014,
+      "clickouts": 383
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "AC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 875,
+      "clickouts": 366
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "AC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 1222,
+      "clickouts": 443
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "AC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 1040,
+      "clickouts": 365
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "C2B",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 9596,
+      "clickouts": 738
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "C2B",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 9450,
+      "clickouts": 623
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "C2B",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 10256,
+      "clickouts": 620
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "C2B",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 17071,
+      "clickouts": 918
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "CD",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 118160,
+      "clickouts": 74013
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "CD",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 106525,
+      "clickouts": 61069
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "CD",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 133339,
+      "clickouts": 72113
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "CD",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 169825,
+      "clickouts": 86571
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "CSV",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 6824,
+      "clickouts": 759
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "CSV",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 6763,
+      "clickouts": 677
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "CSV",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 7003,
+      "clickouts": 719
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "CSV",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 8422,
+      "clickouts": 973
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "IB",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 2834,
+      "clickouts": 873
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "IB",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 3142,
+      "clickouts": 975
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "IB",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 4560,
+      "clickouts": 1270
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "IB",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 4534,
+      "clickouts": 1316
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "MC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 3086,
+      "clickouts": 0
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "MC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 3052,
+      "clickouts": 0
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "MC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 3678,
+      "clickouts": 0
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "MC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 3751,
+      "clickouts": 0
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "portail": "UC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 2834,
+      "clickouts": 1172
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "portail": "UC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 2185,
+      "clickouts": 888
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "portail": "UC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 2891,
+      "clickouts": 903
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "portail": "UC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 3489,
+      "clickouts": 1053
+    }
+  ],
+  "seaByCountry": [
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "France",
+      "typePeriode": "Réel",
+      "clickouts": 61285
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Allemagne",
+      "typePeriode": "Réel",
+      "clickouts": 11300
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "Réel",
+      "clickouts": 3719
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Belgique",
+      "typePeriode": "Réel",
+      "clickouts": 2472
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Suisse",
+      "typePeriode": "Réel",
+      "clickouts": 1249
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Autriche",
+      "typePeriode": "Réel",
+      "clickouts": 958
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Luxembourg",
+      "typePeriode": "Réel",
+      "clickouts": 80
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Espagne",
+      "typePeriode": "Réel",
+      "clickouts": 78
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Canada",
+      "typePeriode": "Réel",
+      "clickouts": 61
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Italie",
+      "typePeriode": "Réel",
+      "clickouts": 50
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "United kingdom",
+      "typePeriode": "Réel",
+      "clickouts": 27
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Morocco",
+      "typePeriode": "Réel",
+      "clickouts": 19
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "United states",
+      "typePeriode": "Réel",
+      "clickouts": 18
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Portugal",
+      "typePeriode": "Réel",
+      "clickouts": 14
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Mauritius",
+      "typePeriode": "Réel",
+      "clickouts": 8
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Sweden",
+      "typePeriode": "Réel",
+      "clickouts": 8
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Algeria",
+      "typePeriode": "Réel",
+      "clickouts": 7
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Thailand",
+      "typePeriode": "Réel",
+      "clickouts": 7
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Monaco",
+      "typePeriode": "Réel",
+      "clickouts": 6
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Denmark",
+      "typePeriode": "Réel",
+      "clickouts": 5
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Dominican republic",
+      "typePeriode": "Réel",
+      "clickouts": 5
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Finland",
+      "typePeriode": "Réel",
+      "clickouts": 5
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Hungary",
+      "typePeriode": "Réel",
+      "clickouts": 4
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Norway",
+      "typePeriode": "Réel",
+      "clickouts": 4
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Andorra",
+      "typePeriode": "Réel",
+      "clickouts": 3
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Slovenia",
+      "typePeriode": "Réel",
+      "clickouts": 3
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Tunisia",
+      "typePeriode": "Réel",
+      "clickouts": 3
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Argentina",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Czech republic",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Egypt",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Israel",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "New zealand",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Senegal",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Australia",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Benin",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Bulgaria",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Cameroon",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Gabon",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Ireland",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Lithuania",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Malta",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Philippines",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Pologne",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Romania",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Seychelles",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Sri lanka",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "Tanzania",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-01-01",
+      "pays": "United arab emirates",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "France",
+      "typePeriode": "Réel",
+      "clickouts": 79649
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Allemagne",
+      "typePeriode": "Réel",
+      "clickouts": 8961
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Belgique",
+      "typePeriode": "Réel",
+      "clickouts": 1636
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "Réel",
+      "clickouts": 1357
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Suisse",
+      "typePeriode": "Réel",
+      "clickouts": 924
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Autriche",
+      "typePeriode": "Réel",
+      "clickouts": 535
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Espagne",
+      "typePeriode": "Réel",
+      "clickouts": 98
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Luxembourg",
+      "typePeriode": "Réel",
+      "clickouts": 60
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Canada",
+      "typePeriode": "Réel",
+      "clickouts": 42
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Italie",
+      "typePeriode": "Réel",
+      "clickouts": 40
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Norway",
+      "typePeriode": "Réel",
+      "clickouts": 28
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "United kingdom",
+      "typePeriode": "Réel",
+      "clickouts": 27
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Algeria",
+      "typePeriode": "Réel",
+      "clickouts": 14
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Portugal",
+      "typePeriode": "Réel",
+      "clickouts": 14
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Senegal",
+      "typePeriode": "Réel",
+      "clickouts": 13
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Morocco",
+      "typePeriode": "Réel",
+      "clickouts": 12
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Romania",
+      "typePeriode": "Réel",
+      "clickouts": 9
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Cambodia",
+      "typePeriode": "Réel",
+      "clickouts": 8
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Guernsey",
+      "typePeriode": "Réel",
+      "clickouts": 8
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Tunisia",
+      "typePeriode": "Réel",
+      "clickouts": 8
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "United states",
+      "typePeriode": "Réel",
+      "clickouts": 8
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Denmark",
+      "typePeriode": "Réel",
+      "clickouts": 6
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Pologne",
+      "typePeriode": "Réel",
+      "clickouts": 6
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Andorra",
+      "typePeriode": "Réel",
+      "clickouts": 5
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Monaco",
+      "typePeriode": "Réel",
+      "clickouts": 4
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Cape verde",
+      "typePeriode": "Réel",
+      "clickouts": 3
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Philippines",
+      "typePeriode": "Réel",
+      "clickouts": 3
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Sweden",
+      "typePeriode": "Réel",
+      "clickouts": 3
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Dominican republic",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Ireland",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Madagascar",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Mauritius",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Mexico",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Thailand",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Ukraine",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Australia",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Bulgaria",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Costa rica",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Hungary",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Israel",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Kazakhstan",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Kenya",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Moldova",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Montenegro",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Seychelles",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-02-01",
+      "pays": "Viet nam",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "France",
+      "typePeriode": "Réel",
+      "clickouts": 73716
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Allemagne",
+      "typePeriode": "Réel",
+      "clickouts": 13980
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "Réel",
+      "clickouts": 3500
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Belgique",
+      "typePeriode": "Réel",
+      "clickouts": 2160
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Italie",
+      "typePeriode": "Réel",
+      "clickouts": 1748
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Suisse",
+      "typePeriode": "Réel",
+      "clickouts": 1202
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Autriche",
+      "typePeriode": "Réel",
+      "clickouts": 905
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Espagne",
+      "typePeriode": "Réel",
+      "clickouts": 129
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Luxembourg",
+      "typePeriode": "Réel",
+      "clickouts": 68
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Canada",
+      "typePeriode": "Réel",
+      "clickouts": 57
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "United kingdom",
+      "typePeriode": "Réel",
+      "clickouts": 55
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "United states",
+      "typePeriode": "Réel",
+      "clickouts": 38
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Andorra",
+      "typePeriode": "Réel",
+      "clickouts": 26
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Norway",
+      "typePeriode": "Réel",
+      "clickouts": 19
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Ukraine",
+      "typePeriode": "Réel",
+      "clickouts": 16
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Morocco",
+      "typePeriode": "Réel",
+      "clickouts": 15
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Ireland",
+      "typePeriode": "Réel",
+      "clickouts": 12
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Pologne",
+      "typePeriode": "Réel",
+      "clickouts": 9
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Tunisia",
+      "typePeriode": "Réel",
+      "clickouts": 9
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Portugal",
+      "typePeriode": "Réel",
+      "clickouts": 8
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Sweden",
+      "typePeriode": "Réel",
+      "clickouts": 8
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Dominican republic",
+      "typePeriode": "Réel",
+      "clickouts": 6
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Mauritius",
+      "typePeriode": "Réel",
+      "clickouts": 5
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Cote d ivoire",
+      "typePeriode": "Réel",
+      "clickouts": 4
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Finland",
+      "typePeriode": "Réel",
+      "clickouts": 4
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Denmark",
+      "typePeriode": "Réel",
+      "clickouts": 3
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Slovenia",
+      "typePeriode": "Réel",
+      "clickouts": 3
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Cambodia",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Greece",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Mexico",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "New zealand",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Senegal",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Australia",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Bolivia",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Bulgaria",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Egypt",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Monaco",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Romania",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Suriname",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-03-01",
+      "pays": "Thailand",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "France",
+      "typePeriode": "Réel",
+      "clickouts": 80286
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Allemagne",
+      "typePeriode": "Réel",
+      "clickouts": 16519
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "Réel",
+      "clickouts": 4972
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Italie",
+      "typePeriode": "Réel",
+      "clickouts": 4366
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Belgique",
+      "typePeriode": "Réel",
+      "clickouts": 2552
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Suisse",
+      "typePeriode": "Réel",
+      "clickouts": 1448
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Autriche",
+      "typePeriode": "Réel",
+      "clickouts": 971
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Luxembourg",
+      "typePeriode": "Réel",
+      "clickouts": 123
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Espagne",
+      "typePeriode": "Réel",
+      "clickouts": 101
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Canada",
+      "typePeriode": "Réel",
+      "clickouts": 42
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "United kingdom",
+      "typePeriode": "Réel",
+      "clickouts": 28
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Algeria",
+      "typePeriode": "Réel",
+      "clickouts": 23
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Romania",
+      "typePeriode": "Réel",
+      "clickouts": 23
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Andorra",
+      "typePeriode": "Réel",
+      "clickouts": 22
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Israel",
+      "typePeriode": "Réel",
+      "clickouts": 20
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Morocco",
+      "typePeriode": "Réel",
+      "clickouts": 19
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Pologne",
+      "typePeriode": "Réel",
+      "clickouts": 18
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Tunisia",
+      "typePeriode": "Réel",
+      "clickouts": 17
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Portugal",
+      "typePeriode": "Réel",
+      "clickouts": 15
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Norway",
+      "typePeriode": "Réel",
+      "clickouts": 14
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "United states",
+      "typePeriode": "Réel",
+      "clickouts": 12
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Denmark",
+      "typePeriode": "Réel",
+      "clickouts": 9
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Ukraine",
+      "typePeriode": "Réel",
+      "clickouts": 9
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Greece",
+      "typePeriode": "Réel",
+      "clickouts": 7
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Dominican republic",
+      "typePeriode": "Réel",
+      "clickouts": 6
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Hungary",
+      "typePeriode": "Réel",
+      "clickouts": 6
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Monaco",
+      "typePeriode": "Réel",
+      "clickouts": 6
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Australia",
+      "typePeriode": "Réel",
+      "clickouts": 5
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Madagascar",
+      "typePeriode": "Réel",
+      "clickouts": 5
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Slovenia",
+      "typePeriode": "Réel",
+      "clickouts": 5
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Thailand",
+      "typePeriode": "Réel",
+      "clickouts": 5
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Cameroon",
+      "typePeriode": "Réel",
+      "clickouts": 4
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Croatia",
+      "typePeriode": "Réel",
+      "clickouts": 4
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Japan",
+      "typePeriode": "Réel",
+      "clickouts": 4
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Sweden",
+      "typePeriode": "Réel",
+      "clickouts": 4
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Albania",
+      "typePeriode": "Réel",
+      "clickouts": 3
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Slovakia (slovak republic)",
+      "typePeriode": "Réel",
+      "clickouts": 3
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Brazil",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Egypt",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "India",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Liechtenstein",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Senegal",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Cote d ivoire",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Ethiopia",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Finland",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Indonesia",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Malta",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Mauritius",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Mexico",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "New zealand",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "San marino",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Sri lanka",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "Turkey",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-04-01",
+      "pays": "United arab emirates",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    }
+  ]
+}
