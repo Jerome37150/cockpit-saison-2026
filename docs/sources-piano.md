@@ -14,9 +14,9 @@ Piano Analytics fournit le trafic web et les conversions. C'est la source canoni
 - Trafic SEO (organique) agrégé et par portail (SEO_PERF, SEO_PER_PORTAIL)
 - Trafic SEA (paid) + clickouts SEA par pays (SEA_PERF, SEA_PAYS)
 
-Piano **ne fournit pas** : budget Google Ads, deliverability email, données business backoffice (résa, CA, portefeuille). Voir [`sources-csv-inaxel.md`](./sources-csv-inaxel.md).
+Piano **ne fournit pas** : budget Google Ads, deliverability email. Les données business (résa, CA, portefeuille campings) viennent de Secure Holiday (`secureholiday.json`).
 
-## Hypothèses techniques à confirmer côté Inaxel
+## Hypothèses techniques à confirmer côté ctoutvert
 
 | Hypothèse | Impact si non vérifiée |
 |---|---|
@@ -80,7 +80,7 @@ Piano **ne fournit pas** : budget Google Ads, deliverability email, données bus
     }
   ],
 
-  // SEA — clickouts par pays (le budget vient de inaxel/sea.json)
+  // SEA — clickouts par pays (le budget par levier marketing n'est plus disponible)
   "seaByCountry": [
     {
       "annee": 2026,

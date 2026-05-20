@@ -122,7 +122,7 @@ const Sidebar = ({ active, setActive, onLogout }) => {
       <div className="px-6 py-4 border-t text-xs" style={{ borderColor: COLORS.border, color: COLORS.muted }}>
         <div className="flex items-center gap-2 mb-1">
           <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: COLORS.primary }} />
-          Données depuis Notion
+          Sources synchronisées
         </div>
         {SYNCED_AT && (
           <div className="mb-3">Sync : {new Date(SYNCED_AT).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}</div>
@@ -402,7 +402,7 @@ const DashboardPage = ({ month }) => {
 
   const trafic = aggValue('trafic');
   const clickouts = aggValue('clickouts');
-  // Réservations : non disponibles par portail dans Notion → null si filtre actif
+  // Réservations : non disponibles par portail dans Secure Holiday agrégé → null si filtre actif
   const resaDir = aggValue('resaDir');
   const resaApp = aggValue('resaApp');
   const totalResa = aggValue('totalResa');
@@ -978,10 +978,23 @@ const SEAPage = ({ month }) => {
 
       <div className="text-[10px] uppercase tracking-widest font-semibold flex-shrink-0" style={{ color: COLORS.muted }}>
         Campagnes SEA en cours
-        <span className="ml-2" style={{ color: COLORS.warn, fontWeight: 700 }}>⚠ Fictif</span>
       </div>
 
-      {/* Tableau campagnes pleine largeur */}
+      {/* Listing campagnes — source non connectée, affichage en erreur */}
+      {SEA_CAMPAGNES === null ? (
+        <div className="flex-1 min-h-0">
+          <DataUnavailable
+            title="Listing campagnes SEA — source non connectée"
+            source="Détail campagnes Google Ads"
+            missing={[
+              'Nom, type, pays, statut (active / pause) de chaque campagne',
+              'Budget mensuel et budget consommé',
+              'Impressions, clics, CTR, conversions, coût/conv.',
+            ]}
+            hint="Brancher l'API Google Ads pour rétablir ce détail. (Piano fournit le trafic SEA agrégé mais pas la granularité campagne.)"
+          />
+        </div>
+      ) : (
       <div className="flex-1 min-h-0">
         <Card className="flex flex-col h-full">
           <div className="flex items-center justify-between mb-2 flex-shrink-0">
@@ -1058,6 +1071,7 @@ const SEAPage = ({ month }) => {
         </Card>
 
       </div>
+      )}
     </div>
   );
 };
@@ -1349,6 +1363,21 @@ const CRMCalendar = ({ campagnes }) => {
 };
 
 const CRMPage = ({ month }) => {
+  if (CRM_BASE === null) {
+    return (
+      <DataUnavailable
+        title="Page CRM — source non connectée"
+        source="CRM (newsletter + base contacts)"
+        missing={[
+          'Base contacts (totaux, nouveaux, désabonnements)',
+          'Performance newsletters (taux ouverture / clic / désab)',
+          'Calendrier campagnes 2026',
+          'Ventilation par langue',
+        ]}
+        hint="Brancher un export Brevo / Mailchimp / ou plateforme email équivalente pour rétablir cette page."
+      />
+    );
+  }
   const m = month === 'cumul' ? 'avril' : month;
   const data = CRM_BASE[m];
   const nl = CRM_NL[m];
@@ -1455,12 +1484,26 @@ const CRMPage = ({ month }) => {
 
 // === PERFORMANCE ===
 // ROI marketing : Budget vs CA réservations, par mois et par levier.
-// Note : la budget Notion couvre Oct→Mars (6 mois), le CA disponible couvre
-// Jan→Avr (4 mois). Le ROI mensuel s'appuie sur un budget mensuel moyen
-// (budget cumul / 6) pour rester comparable.
+// Désactivée temporairement (DataUnavailable) tant que la source Budget
+// par levier n'est pas rebranchée — Secure Holiday couvre le CA mais pas
+// le budget par levier marketing.
 const LEVIER_TO_CANAL = { SEO: 'SEO', SEA: 'SEA', Direct: 'DIRECT', IA: 'IA', RS: 'SOCIAL', CRM: 'CRM' };
 
 const PerformancePage = ({ month }) => {
+  if (BUDGET_LEVIERS === null) {
+    return (
+      <DataUnavailable
+        title="Page Performance — budget marketing non connecté"
+        source="Budget par levier marketing"
+        missing={[
+          'Budget par levier (SEO, SEA, RS, Content, Partenariats…)',
+          'CA par produit',
+          'ROI mensuel et coût d\'acquisition',
+        ]}
+        hint="Brancher l'export finance / budget marketing pour calculer le ROI. (Secure Holiday expose l'ad spend par engine PPC mais pas la ventilation par levier marketing.)"
+      />
+    );
+  }
   const isCumul = month === 'cumul';
 
   // Budget cumul Oct→Mars 2026 (réel & N-1)
@@ -1888,6 +1931,19 @@ const PRIORITE_CONFIG = {
 };
 
 const AnalyseIAPage = () => {
+  if (CRM_BASE === null || BUDGET_LEVIERS === null) {
+    return (
+      <DataUnavailable
+        title="Analyse IA — sources multiples non connectées"
+        source="CRM + Budget marketing"
+        missing={[
+          'Données CRM (newsletter, base contacts) — pour insights audience',
+          'Budget marketing par levier — pour calcul de ROI',
+        ]}
+        hint="La synthèse exécutive combine plusieurs sources. Reconnecter CRM + Budget pour rétablir."
+      />
+    );
+  }
   const { metriques, forces, risques, recommandations } = buildAnalyseIA();
 
   return (
@@ -2014,6 +2070,20 @@ const AnalyseIAPage = () => {
 
 // === CLIENTS ===
 const ClientsPage = () => {
+  if (CLIENTS === null || CAMPINGS === null || CA_PRODUITS === null) {
+    return (
+      <DataUnavailable
+        title="Page Clients — source commerciale non connectée"
+        source="Portefeuille campings (statut commercial)"
+        missing={[
+          'Liste des campings clients avec statut Abonnement / PPC',
+          'Budgets mensuels et budgets restants par camping',
+          'CA par produit (Pack Trafic, Pack Camping, etc.)',
+        ]}
+        hint="Brancher l'export commercial CTV pour rétablir cette page. (Secure Holiday a la performance par camping — voir secureholiday.json perEstablishment — mais pas le statut Abonnement/PPC.)"
+      />
+    );
+  }
   const totalCA = CA_PRODUITS.reduce((s, p) => s + (p.ca ?? 0), 0);
   const evoAB = CAMPINGS.n1 ? (CAMPINGS.abonnement - CAMPINGS.n1) / CAMPINGS.n1 : null;
   const [search, setSearch] = useState('');
@@ -2244,12 +2314,81 @@ const LoginScreen = ({ onSuccess }) => {
         </form>
 
         <div className="text-[10px] mt-5 pt-4 border-t text-center" style={{ borderColor: COLORS.border, color: COLORS.muted }}>
-          Accès restreint · Données saison 2026 Inaxel
+          Accès restreint · Cockpit saison 2026
         </div>
       </div>
     </div>
   );
 };
+
+/* =========================================================================
+   DATA UNAVAILABLE / PENDING — panneaux d'erreur quand une source manque
+   ========================================================================= */
+
+const DataUnavailable = ({ title = 'Source non connectée', source, missing = [], hint }) => (
+  <div
+    className="h-full flex items-center justify-center"
+    style={{
+      borderRadius: 12,
+      border: `2px dashed ${COLORS.bad}55`,
+      background: COLORS.surface,
+      padding: 32,
+    }}
+  >
+    <div className="text-center max-w-md">
+      <div
+        className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-3"
+        style={{ background: COLORS.bad + '22', color: COLORS.bad }}
+      >
+        <AlertCircle size={14} />
+        <span
+          className="text-[11px] uppercase tracking-wider font-semibold"
+          style={{ fontFamily: 'Manrope, sans-serif' }}
+        >
+          {title}
+        </span>
+      </div>
+      {source && (
+        <div className="text-base font-semibold mb-2" style={{ fontFamily: 'Manrope, sans-serif' }}>
+          {source}
+        </div>
+      )}
+      {missing.length > 0 && (
+        <div className="text-[12px] mt-3" style={{ color: COLORS.muted }}>
+          <div className="mb-1.5 font-medium">Métriques requises :</div>
+          <ul className="space-y-1 text-left inline-block">
+            {missing.map((m, i) => (
+              <li key={i} className="flex items-start gap-2">
+                <span style={{ color: COLORS.bad }}>•</span>
+                <span>{m}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {hint && (
+        <div className="text-[11px] mt-3 italic" style={{ color: COLORS.muted }}>
+          {hint}
+        </div>
+      )}
+    </div>
+  </div>
+);
+
+const DataPending = ({ source, reason }) => (
+  <div
+    className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md text-[11px]"
+    style={{
+      border: `1px dashed ${COLORS.warn}66`,
+      background: COLORS.warn + '11',
+      color: COLORS.warn,
+      fontFamily: 'JetBrains Mono, monospace',
+    }}
+  >
+    <Activity size={12} />
+    <span>{source} — {reason}</span>
+  </div>
+);
 
 /* =========================================================================
    SOURCES INFO BUTTON (bouton "i" + popover détail par source)
@@ -2259,11 +2398,6 @@ const SOURCE_LABELS = {
   piano: 'Piano Analytics',
   gsc: 'Google Search Console',
   secureholiday: 'Secure Holiday',
-  reservations: 'Réservations (déprécié)',
-  sea: 'SEA (déprécié)',
-  crm: 'CRM (déprécié)',
-  budget: 'Budget (déprécié)',
-  clients: 'Clients (déprécié)',
 };
 
 const SourcesInfoButton = () => {
@@ -2388,7 +2522,7 @@ export default function App() {
           </div>
         </div>
         <footer className="px-6 py-2 border-t text-[11px] flex justify-between flex-shrink-0" style={{ borderColor: COLORS.border, color: COLORS.muted }}>
-          <span>Source unique : page Notion « Cockpit Saison 2026 »</span>
+          <span>Sources : Piano Analytics · Secure Holiday · Google Search Console</span>
           <div className="flex items-center gap-2">
             {SYNCED_AT && (
               <span style={{ fontFamily: 'JetBrains Mono, monospace' }}>

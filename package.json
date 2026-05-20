@@ -10,8 +10,7 @@
     "sync-piano": "node scripts/sync-piano.mjs",
     "sync-gsc": "node scripts/sync-gsc.mjs",
     "sync-secureholiday": "node scripts/sync-secureholiday.mjs && node scripts/aggregate-secureholiday.mjs",
-    "aggregate-secureholiday": "node scripts/aggregate-secureholiday.mjs",
-    "ingest-csv": "node scripts/ingest-csv.mjs"
+    "aggregate-secureholiday": "node scripts/aggregate-secureholiday.mjs"
   },
   "dependencies": {
     "googleapis": "^171.4.0",

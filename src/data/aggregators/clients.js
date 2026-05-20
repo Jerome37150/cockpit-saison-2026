@@ -1,13 +1,15 @@
 // =============================================================================
-// CLIENTS — liste des campings clients.
+// CLIENTS — DÉPRÉCIÉ
 //
-// Source : Inaxel (`inaxel/clients.json`) — export backoffice / CRM commercial,
-// déposé par l'agent IA.
+// La source clients.json a été supprimée (alimentation manuelle, jamais re-syncée).
+// Aucun équivalent direct dans Piano / Secure Holiday / GSC pour la notion
+// de "statut commercial AB/PPC" des campings.
+//
+// Secure Holiday expose un perEstablishment avec CA + volume de réservations
+// (voir secureholiday.json perEstablishment) mais sans la catégorisation
+// commerciale Abonnement/PPC.
+//
+// La page Clients doit afficher <DataUnavailable />.
 // =============================================================================
 
-import clients from '../sources/inaxel/clients.json';
-import { clientsSchema, validate } from '../shared/schemas.js';
-
-const data = validate(clientsSchema, clients, 'inaxel/clients.json');
-
-export const CLIENTS = data.rows;
+export const CLIENTS = null;
