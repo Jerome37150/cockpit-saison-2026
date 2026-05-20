@@ -9,7 +9,7 @@ import {
   TrendingUp, TrendingDown, AlertTriangle, Calendar,
   CheckCircle2, AlertCircle, Lightbulb, Zap, Users,
   Eye, X, ChevronLeft, ChevronRight, Search, Activity, Sparkles,
-  Lock, LogOut,
+  Lock, LogOut, Info,
 } from 'lucide-react';
 
 import {
@@ -23,6 +23,7 @@ import {
   BUDGET_LEVIERS, CA_PRODUITS, CAMPINGS,
   CLIENTS,
   SYNCED_AT,
+  SYNCED_AT_BY_SOURCE,
 } from './data';
 
 /* =========================================================================
@@ -2251,6 +2252,80 @@ const LoginScreen = ({ onSuccess }) => {
 };
 
 /* =========================================================================
+   SOURCES INFO BUTTON (bouton "i" + popover détail par source)
+   ========================================================================= */
+
+const SOURCE_LABELS = {
+  piano: 'Piano Analytics',
+  gsc: 'Google Search Console',
+  secureholiday: 'Secure Holiday',
+  reservations: 'Réservations (déprécié)',
+  sea: 'SEA (déprécié)',
+  crm: 'CRM (déprécié)',
+  budget: 'Budget (déprécié)',
+  clients: 'Clients (déprécié)',
+};
+
+const SourcesInfoButton = () => {
+  const [open, setOpen] = useState(false);
+  const entries = Object.entries(SYNCED_AT_BY_SOURCE);
+  const show = () => setOpen(true);
+  const hide = () => setOpen(false);
+  return (
+    <div className="relative inline-flex items-center">
+      <button
+        type="button"
+        onMouseEnter={show}
+        onMouseLeave={hide}
+        onFocus={show}
+        onBlur={hide}
+        onClick={() => setOpen((v) => !v)}
+        className="inline-flex items-center justify-center w-4 h-4 rounded-full hover:bg-white/10 transition-colors"
+        aria-label="Détail des sources de données et dernière mise à jour"
+        style={{ color: COLORS.muted }}
+      >
+        <Info size={12} />
+      </button>
+      {open && (
+        <div
+          role="tooltip"
+          className="absolute bottom-full right-0 mb-2 p-3 rounded-lg shadow-xl text-[11px]"
+          style={{
+            background: COLORS.surface2,
+            border: `1px solid ${COLORS.border}`,
+            color: COLORS.text,
+            minWidth: 280,
+            zIndex: 50,
+          }}
+        >
+          <div className="font-semibold mb-2" style={{ color: COLORS.primary, fontFamily: 'Manrope, sans-serif' }}>
+            Sources de données
+          </div>
+          <ul className="space-y-1.5">
+            {entries.map(([key, ts]) => (
+              <li key={key} className="flex justify-between gap-4">
+                <span style={{ color: COLORS.muted }}>{SOURCE_LABELS[key] ?? key}</span>
+                <span style={{ fontFamily: 'JetBrains Mono, monospace', color: ts ? COLORS.text : COLORS.bad }}>
+                  {ts
+                    ? new Date(ts).toLocaleString('fr-FR', {
+                        day: '2-digit',
+                        month: '2-digit',
+                        year: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                      })
+                    : '— jamais'}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+/* =========================================================================
    APP
    ========================================================================= */
 export default function App() {
@@ -2314,11 +2389,14 @@ export default function App() {
         </div>
         <footer className="px-6 py-2 border-t text-[11px] flex justify-between flex-shrink-0" style={{ borderColor: COLORS.border, color: COLORS.muted }}>
           <span>Source unique : page Notion « Cockpit Saison 2026 »</span>
-          {SYNCED_AT && (
-            <span style={{ fontFamily: 'JetBrains Mono, monospace' }}>
-              Dernière sync : {new Date(SYNCED_AT).toLocaleString('fr-FR')}
-            </span>
-          )}
+          <div className="flex items-center gap-2">
+            {SYNCED_AT && (
+              <span style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+                Dernière sync : {new Date(SYNCED_AT).toLocaleString('fr-FR')}
+              </span>
+            )}
+            <SourcesInfoButton />
+          </div>
         </footer>
       </main>
     </div>

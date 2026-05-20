@@ -7,13 +7,14 @@
 
 import piano from '../sources/piano.json';
 import gsc from '../sources/gsc.json';
+import secureholiday from '../sources/secureholiday.json';
 import reservations from '../sources/inaxel/reservations.json';
 import sea from '../sources/inaxel/sea.json';
 import crm from '../sources/inaxel/crm.json';
 import budget from '../sources/inaxel/budget.json';
 import clients from '../sources/inaxel/clients.json';
 
-const sources = { piano, gsc, reservations, sea, crm, budget, clients };
+const sources = { piano, gsc, secureholiday, reservations, sea, crm, budget, clients };
 
 export const SYNCED_AT_BY_SOURCE = Object.fromEntries(
   Object.entries(sources).map(([k, v]) => [k, v.syncedAt ?? null]),

@@ -80,7 +80,7 @@ export const gscSchema = z.object({
 });
 
 // -----------------------------------------------------------------------------
-// Inaxel — Réservations & CA
+// Inaxel — Réservations & CA  (DÉPRÉCIÉ — sera supprimé une fois la refonte SH terminée)
 // -----------------------------------------------------------------------------
 
 export const reservationsSchema = z.object({
@@ -93,6 +93,53 @@ export const reservationsSchema = z.object({
     ca: optionalNumber,
     volumeResa: optionalNumber,
   })),
+});
+
+// -----------------------------------------------------------------------------
+// Secure Holiday — agrégat depuis les XLSX de monitoring.secureholiday.net
+// -----------------------------------------------------------------------------
+
+export const secureholidaySchema = z.object({
+  ...meta,
+  perMonth: z.array(z.object({
+    annee: z.number().int(),
+    mois: isoMois,
+    typeReservation: z.string(),   // "Directe" (Pack Trafic) | "Apporteur" (Pack Trafic Apporteurs)
+    ca: optionalNumber,
+    volumeResa: optionalNumber,
+    ticketMoyen: optionalNumber,
+  })),
+  perMonthByMarket: z.array(z.object({
+    mois: isoMois,
+    country: z.string(),
+    ca: optionalNumber,
+    volumeResa: optionalNumber,
+  })),
+  perEstablishment: z.array(z.object({
+    establishmentId: z.number(),
+    establishmentName: z.string(),
+    country: z.string(),
+    region: z.string(),
+    department: z.string(),
+    ca: optionalNumber,
+    volumeResa: optionalNumber,
+  })),
+  statsClicks: z.object({
+    coversFile: z.string().nullable(),
+    perEngine: z.array(z.object({
+      engineId: z.number(),
+      engineName: z.string(),
+      shCount: optionalNumber,
+      shCountEuro: optionalNumber,
+      clickouts: optionalNumber,
+      clickoutsDedup: optionalNumber,
+      clicksMin: optionalNumber,
+      clicksMoyen: optionalNumber,
+      clicksMedian: optionalNumber,
+      clicksMax: optionalNumber,
+      budget: optionalNumber,
+    })),
+  }),
 });
 
 // -----------------------------------------------------------------------------

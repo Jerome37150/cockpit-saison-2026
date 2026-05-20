@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "sync-piano": "node scripts/sync-piano.mjs",
     "sync-gsc": "node scripts/sync-gsc.mjs",
-    "sync-secureholiday": "node scripts/sync-secureholiday.mjs",
+    "sync-secureholiday": "node scripts/sync-secureholiday.mjs && node scripts/aggregate-secureholiday.mjs",
+    "aggregate-secureholiday": "node scripts/aggregate-secureholiday.mjs",
     "ingest-csv": "node scripts/ingest-csv.mjs"
   },
   "dependencies": {
@@ -30,6 +31,7 @@
     "playwright": "^1.60.0",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "xlsx": "^0.18.5"
   }
 }
