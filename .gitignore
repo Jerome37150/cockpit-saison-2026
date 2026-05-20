@@ -21,6 +21,12 @@ gsc-service-account*.json
 # CSV bruts déposés par l'agent IA — seuls les JSON dérivés sont versionnés
 raw-csv/
 
+# Sorties Playwright codegen (peuvent contenir des creds en clair, à sanitiser avant tout commit)
+codegen-*.js
+
+# Screenshots de debug produits par les scripts Playwright en cas d'erreur
+data/raw/**/_error-*.png
+
 # Editor
 .vscode/*
 !.vscode/extensions.json

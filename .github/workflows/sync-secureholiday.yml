@@ -1,0 +1,78 @@
+name: Sync Secure Holiday (nightly)
+
+on:
+  schedule:
+    # Tous les jours à 05:00 UTC (= 07:00 Paris été / 06:00 hiver), assez tard pour
+    # que les données J-1 soient consolidées côté Secure Holiday, assez tôt pour que
+    # le repo soit à jour avant la journée de travail.
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+    inputs:
+      from:
+        description: "Date de début (YYYY-MM-DD). Laisser vide = J-1."
+        required: false
+      to:
+        description: "Date de fin (YYYY-MM-DD). Laisser vide = J-1."
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-secureholiday
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Secure Holiday sync
+        env:
+          SECUREHOLIDAY_USER: ${{ secrets.SECUREHOLIDAY_USER }}
+          SECUREHOLIDAY_PASSWORD: ${{ secrets.SECUREHOLIDAY_PASSWORD }}
+          FROM: ${{ inputs.from }}
+          TO: ${{ inputs.to }}
+        run: |
+          ARGS=""
+          if [ -n "$FROM" ]; then ARGS="$ARGS --from $FROM"; fi
+          if [ -n "$TO" ]; then ARGS="$ARGS --to $TO"; fi
+          npm run sync-secureholiday -- $ARGS
+
+      - name: Upload error screenshot (on failure)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: secureholiday-error-screenshots
+          path: data/raw/secureholiday/_error-*.png
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Commit and push new exports
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/raw/secureholiday/
+          if git diff --staged --quiet; then
+            echo "Aucun nouveau fichier à committer."
+          else
+            git commit -m "chore(secureholiday): sync $(date -u +%Y-%m-%d)"
+            git push
+          fi
