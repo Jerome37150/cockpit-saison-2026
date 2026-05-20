@@ -166,7 +166,14 @@ async function exportStatsClicks(page) {
 // ----- main ------------------------------------------------------------------
 
 const browser = await chromium.launch({ headless: !HEADFUL });
-const context = await browser.newContext({ acceptDownloads: true });
+const context = await browser.newContext({
+  acceptDownloads: true,
+  // Force locale FR : sur les runners GitHub (Ubuntu, locale C.UTF-8),
+  // sans ça l'UI Secure Holiday est servie en anglais et les sélecteurs
+  // type "Statistiques Ventes" ne matchent plus.
+  locale: 'fr-FR',
+  timezoneId: 'Europe/Paris',
+});
 const page = await context.newPage();
 
 try {
