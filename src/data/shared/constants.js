@@ -3,24 +3,28 @@
 // Tout ce qui ne dépend pas d'une source vit ici.
 // =============================================================================
 
-export const MONTHS = ['janvier', 'février', 'mars', 'avril', 'cumul'];
-
-// Mois "actifs" sur lesquels les aggregators itèrent (sans le pseudo-mois cumul).
-// À étendre quand la saison avance.
-export const ACTIVE_MONTHS = ['janvier', 'février', 'mars', 'avril'];
-
-export const MONTH_LABELS = {
-  janvier: 'Janvier 2026',
-  février: 'Février 2026',
-  mars: 'Mars 2026',
-  avril: 'Avril 2026',
-  cumul: 'Cumul Jan→Avr 2026',
-};
-
 const FRENCH_MONTHS = [
   'janvier', 'février', 'mars', 'avril', 'mai', 'juin',
   'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre',
 ];
+
+const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
+// Année courante (Réel) du cockpit — utilisée pour les libellés de mois.
+export const COCKPIT_YEAR = 2026;
+
+// Tous les mois calendaires + le pseudo-mois "cumul" qui sert au sélecteur.
+export const MONTHS = [...FRENCH_MONTHS, 'cumul'];
+
+// Mois itérés par les aggregators (sans le pseudo "cumul").
+// Couvre l'année calendaire complète — les sources définissent quels mois
+// ont effectivement des données (les autres affichent null).
+export const ACTIVE_MONTHS = [...FRENCH_MONTHS];
+
+export const MONTH_LABELS = {
+  ...Object.fromEntries(FRENCH_MONTHS.map((m) => [m, `${cap(m)} ${COCKPIT_YEAR}`])),
+  cumul: `Cumul Janvier→Décembre ${COCKPIT_YEAR}`,
+};
 
 // Convertit un ISO date "YYYY-MM-DD" en nom de mois français.
 // Année-agnostique : fonctionne pour 2025, 2026, 2027... pareil.

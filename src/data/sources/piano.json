@@ -1,7 +1,115 @@
 {
-  "syncedAt": "2026-05-12T06:52:40.352Z",
+  "syncedAt": "2026-05-20T19:06:55.634Z",
   "_about": "Piano Analytics — généré par scripts/sync-piano.mjs",
   "perPortail": [
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "AC",
+      "type": "N-1",
+      "trafic": 4469,
+      "clickouts": 1838,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "AC",
+      "type": "N-1",
+      "trafic": 4101,
+      "clickouts": 1608,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "AC",
+      "type": "N-1",
+      "trafic": 5442,
+      "clickouts": 2119,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "AC",
+      "type": "N-1",
+      "trafic": 5653,
+      "clickouts": 1985,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "AC",
+      "type": "N-1",
+      "trafic": 6443,
+      "clickouts": 2110,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "AC",
+      "type": "N-1",
+      "trafic": 9664,
+      "clickouts": 3415,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "AC",
+      "type": "N-1",
+      "trafic": 12489,
+      "clickouts": 4733,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "AC",
+      "type": "N-1",
+      "trafic": 8384,
+      "clickouts": 2761,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "AC",
+      "type": "N-1",
+      "trafic": 2245,
+      "clickouts": 472,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "AC",
+      "type": "N-1",
+      "trafic": 1325,
+      "clickouts": 299,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "AC",
+      "type": "N-1",
+      "trafic": 1251,
+      "clickouts": 284,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "AC",
+      "type": "N-1",
+      "trafic": 1123,
+      "clickouts": 276,
+      "origine": "Réel"
+    },
     {
       "annee": 2026,
       "mois": "2026-01-01",
@@ -36,6 +144,123 @@
       "type": "Réel",
       "trafic": 1585,
       "clickouts": 450,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "AC",
+      "type": "Réel",
+      "trafic": 997,
+      "clickouts": 275,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "C2B",
+      "type": "N-1",
+      "trafic": 18461,
+      "clickouts": 1437,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "C2B",
+      "type": "N-1",
+      "trafic": 18398,
+      "clickouts": 1512,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "C2B",
+      "type": "N-1",
+      "trafic": 20551,
+      "clickouts": 1709,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "C2B",
+      "type": "N-1",
+      "trafic": 28854,
+      "clickouts": 1845,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "C2B",
+      "type": "N-1",
+      "trafic": 33505,
+      "clickouts": 2084,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "C2B",
+      "type": "N-1",
+      "trafic": 41791,
+      "clickouts": 2267,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "C2B",
+      "type": "N-1",
+      "trafic": 59995,
+      "clickouts": 3289,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "C2B",
+      "type": "N-1",
+      "trafic": 67320,
+      "clickouts": 2825,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "C2B",
+      "type": "N-1",
+      "trafic": 27016,
+      "clickouts": 928,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "C2B",
+      "type": "N-1",
+      "trafic": 11015,
+      "clickouts": 499,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "C2B",
+      "type": "N-1",
+      "trafic": 7002,
+      "clickouts": 409,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "C2B",
+      "type": "N-1",
+      "trafic": 6688,
+      "clickouts": 471,
       "origine": "Réel"
     },
     {
@@ -76,6 +301,123 @@
     },
     {
       "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "C2B",
+      "type": "Réel",
+      "trafic": 23118,
+      "clickouts": 1063,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "CD",
+      "type": "N-1",
+      "trafic": 241666,
+      "clickouts": 146577,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "CD",
+      "type": "N-1",
+      "trafic": 252002,
+      "clickouts": 157515,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "CD",
+      "type": "N-1",
+      "trafic": 266894,
+      "clickouts": 155236,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "CD",
+      "type": "N-1",
+      "trafic": 286065,
+      "clickouts": 159927,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "CD",
+      "type": "N-1",
+      "trafic": 349119,
+      "clickouts": 213648,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "CD",
+      "type": "N-1",
+      "trafic": 480609,
+      "clickouts": 285691,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "CD",
+      "type": "N-1",
+      "trafic": 618563,
+      "clickouts": 424951,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "CD",
+      "type": "N-1",
+      "trafic": 420927,
+      "clickouts": 276267,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "CD",
+      "type": "N-1",
+      "trafic": 138920,
+      "clickouts": 61921,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "CD",
+      "type": "N-1",
+      "trafic": 88270,
+      "clickouts": 41909,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "CD",
+      "type": "N-1",
+      "trafic": 92741,
+      "clickouts": 52956,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "CD",
+      "type": "N-1",
+      "trafic": 100595,
+      "clickouts": 58352,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
       "mois": "2026-01-01",
       "portail": "CD",
       "type": "Réel",
@@ -108,6 +450,123 @@
       "type": "Réel",
       "trafic": 352340,
       "clickouts": 203264,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "CD",
+      "type": "Réel",
+      "trafic": 251287,
+      "clickouts": 147395,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "CSV",
+      "type": "N-1",
+      "trafic": 12289,
+      "clickouts": 1158,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "CSV",
+      "type": "N-1",
+      "trafic": 12889,
+      "clickouts": 1376,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "CSV",
+      "type": "N-1",
+      "trafic": 13953,
+      "clickouts": 1487,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "CSV",
+      "type": "N-1",
+      "trafic": 14842,
+      "clickouts": 1627,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "CSV",
+      "type": "N-1",
+      "trafic": 16237,
+      "clickouts": 1791,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "CSV",
+      "type": "N-1",
+      "trafic": 19813,
+      "clickouts": 1806,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "CSV",
+      "type": "N-1",
+      "trafic": 25812,
+      "clickouts": 2399,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "CSV",
+      "type": "N-1",
+      "trafic": 22482,
+      "clickouts": 2193,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "CSV",
+      "type": "N-1",
+      "trafic": 6556,
+      "clickouts": 665,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "CSV",
+      "type": "N-1",
+      "trafic": 4096,
+      "clickouts": 361,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "CSV",
+      "type": "N-1",
+      "trafic": 4398,
+      "clickouts": 366,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "CSV",
+      "type": "N-1",
+      "trafic": 4829,
+      "clickouts": 544,
       "origine": "Réel"
     },
     {
@@ -148,6 +607,123 @@
     },
     {
       "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "CSV",
+      "type": "Réel",
+      "trafic": 9651,
+      "clickouts": 1537,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "IB",
+      "type": "N-1",
+      "trafic": 5996,
+      "clickouts": 1959,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "IB",
+      "type": "N-1",
+      "trafic": 6921,
+      "clickouts": 2261,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "IB",
+      "type": "N-1",
+      "trafic": 9018,
+      "clickouts": 3289,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "IB",
+      "type": "N-1",
+      "trafic": 10365,
+      "clickouts": 3736,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "IB",
+      "type": "N-1",
+      "trafic": 11406,
+      "clickouts": 4259,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "IB",
+      "type": "N-1",
+      "trafic": 24141,
+      "clickouts": 7517,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "IB",
+      "type": "N-1",
+      "trafic": 21059,
+      "clickouts": 8716,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "IB",
+      "type": "N-1",
+      "trafic": 13936,
+      "clickouts": 5794,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "IB",
+      "type": "N-1",
+      "trafic": 4450,
+      "clickouts": 643,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "IB",
+      "type": "N-1",
+      "trafic": 5022,
+      "clickouts": 434,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "IB",
+      "type": "N-1",
+      "trafic": 2803,
+      "clickouts": 501,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "IB",
+      "type": "N-1",
+      "trafic": 2261,
+      "clickouts": 468,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
       "mois": "2026-01-01",
       "portail": "IB",
       "type": "Réel",
@@ -180,6 +756,123 @@
       "type": "Réel",
       "trafic": 6486,
       "clickouts": 1828,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "IB",
+      "type": "Réel",
+      "trafic": 4400,
+      "clickouts": 1171,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "MC",
+      "type": "N-1",
+      "trafic": 6169,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "MC",
+      "type": "N-1",
+      "trafic": 5837,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "MC",
+      "type": "N-1",
+      "trafic": 6224,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "MC",
+      "type": "N-1",
+      "trafic": 6376,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "MC",
+      "type": "N-1",
+      "trafic": 12177,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "MC",
+      "type": "N-1",
+      "trafic": 17667,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "MC",
+      "type": "N-1",
+      "trafic": 12192,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "MC",
+      "type": "N-1",
+      "trafic": 9838,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "MC",
+      "type": "N-1",
+      "trafic": 5847,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "MC",
+      "type": "N-1",
+      "trafic": 5955,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "MC",
+      "type": "N-1",
+      "trafic": 5194,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "MC",
+      "type": "N-1",
+      "trafic": 5679,
+      "clickouts": 0,
       "origine": "Réel"
     },
     {
@@ -220,6 +913,123 @@
     },
     {
       "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "MC",
+      "type": "Réel",
+      "trafic": 5228,
+      "clickouts": 0,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "UC",
+      "type": "N-1",
+      "trafic": 15584,
+      "clickouts": 4779,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "UC",
+      "type": "N-1",
+      "trafic": 21172,
+      "clickouts": 5463,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "UC",
+      "type": "N-1",
+      "trafic": 30924,
+      "clickouts": 7637,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "UC",
+      "type": "N-1",
+      "trafic": 31522,
+      "clickouts": 7474,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "UC",
+      "type": "N-1",
+      "trafic": 35485,
+      "clickouts": 9974,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "UC",
+      "type": "N-1",
+      "trafic": 60417,
+      "clickouts": 15145,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "UC",
+      "type": "N-1",
+      "trafic": 62984,
+      "clickouts": 17146,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "UC",
+      "type": "N-1",
+      "trafic": 44341,
+      "clickouts": 13167,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "UC",
+      "type": "N-1",
+      "trafic": 18645,
+      "clickouts": 5883,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "UC",
+      "type": "N-1",
+      "trafic": 11046,
+      "clickouts": 3895,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "UC",
+      "type": "N-1",
+      "trafic": 9138,
+      "clickouts": 3639,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "UC",
+      "type": "N-1",
+      "trafic": 13215,
+      "clickouts": 4575,
+      "origine": "Réel"
+    },
+    {
+      "annee": 2026,
       "mois": "2026-01-01",
       "portail": "UC",
       "type": "Réel",
@@ -253,9 +1063,501 @@
       "trafic": 48937,
       "clickouts": 14604,
       "origine": "Réel"
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "UC",
+      "type": "Réel",
+      "trafic": 36404,
+      "clickouts": 12514,
+      "origine": "Réel"
     }
   ],
   "byChannel": [
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "canal": "Direct",
+      "typePeriode": "N-1",
+      "trafic": 28841
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "canal": "Referral",
+      "typePeriode": "N-1",
+      "trafic": 3171
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "canal": "SEA",
+      "typePeriode": "N-1",
+      "trafic": 63130
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "canal": "SEO",
+      "typePeriode": "N-1",
+      "trafic": 203048
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "canal": "Social Media",
+      "typePeriode": "N-1",
+      "trafic": 2839
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "canal": "Direct",
+      "typePeriode": "N-1",
+      "trafic": 29559
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "canal": "Referral",
+      "typePeriode": "N-1",
+      "trafic": 3073
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "canal": "SEA",
+      "typePeriode": "N-1",
+      "trafic": 96817
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "canal": "SEO",
+      "typePeriode": "N-1",
+      "trafic": 185550
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "canal": "Social Media",
+      "typePeriode": "N-1",
+      "trafic": 2866
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "canal": "Direct",
+      "typePeriode": "N-1",
+      "trafic": 33033
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "canal": "Referral",
+      "typePeriode": "N-1",
+      "trafic": 3460
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "canal": "SEA",
+      "typePeriode": "N-1",
+      "trafic": 101316
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "canal": "SEO",
+      "typePeriode": "N-1",
+      "trafic": 206833
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "canal": "Social Media",
+      "typePeriode": "N-1",
+      "trafic": 2784
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "canal": "Direct",
+      "typePeriode": "N-1",
+      "trafic": 37688
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "canal": "IA Générative",
+      "typePeriode": "N-1",
+      "trafic": 204
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "canal": "Referral",
+      "typePeriode": "N-1",
+      "trafic": 4507
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "canal": "SEA",
+      "typePeriode": "N-1",
+      "trafic": 116740
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "canal": "SEO",
+      "typePeriode": "N-1",
+      "trafic": 216910
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "canal": "Social Media",
+      "typePeriode": "N-1",
+      "trafic": 5610
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "canal": "Direct",
+      "typePeriode": "N-1",
+      "trafic": 45294
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "canal": "IA Générative",
+      "typePeriode": "N-1",
+      "trafic": 1348
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "canal": "Referral",
+      "typePeriode": "N-1",
+      "trafic": 5569
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "canal": "SEA",
+      "typePeriode": "N-1",
+      "trafic": 150612
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "canal": "SEO",
+      "typePeriode": "N-1",
+      "trafic": 256600
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "canal": "Social Media",
+      "typePeriode": "N-1",
+      "trafic": 3087
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "canal": "Direct",
+      "typePeriode": "N-1",
+      "trafic": 63574
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "canal": "IA Générative",
+      "typePeriode": "N-1",
+      "trafic": 2398
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "canal": "Referral",
+      "typePeriode": "N-1",
+      "trafic": 10515
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "canal": "SEA",
+      "typePeriode": "N-1",
+      "trafic": 267056
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "canal": "SEO",
+      "typePeriode": "N-1",
+      "trafic": 305349
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "canal": "Social Media",
+      "typePeriode": "N-1",
+      "trafic": 3049
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "canal": "Direct",
+      "typePeriode": "N-1",
+      "trafic": 72738
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "canal": "IA Générative",
+      "typePeriode": "N-1",
+      "trafic": 3231
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "canal": "Referral",
+      "typePeriode": "N-1",
+      "trafic": 9940
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "canal": "SEA",
+      "typePeriode": "N-1",
+      "trafic": 347288
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "canal": "SEO",
+      "typePeriode": "N-1",
+      "trafic": 373193
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "canal": "Social Media",
+      "typePeriode": "N-1",
+      "trafic": 2587
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "canal": "Direct",
+      "typePeriode": "N-1",
+      "trafic": 65031
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "canal": "IA Générative",
+      "typePeriode": "N-1",
+      "trafic": 1968
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "canal": "Referral",
+      "typePeriode": "N-1",
+      "trafic": 11047
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "canal": "SEA",
+      "typePeriode": "N-1",
+      "trafic": 164947
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "canal": "SEO",
+      "typePeriode": "N-1",
+      "trafic": 339834
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "canal": "Social Media",
+      "typePeriode": "N-1",
+      "trafic": 1708
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "canal": "Direct",
+      "typePeriode": "N-1",
+      "trafic": 34613
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "canal": "IA Générative",
+      "typePeriode": "N-1",
+      "trafic": 762
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "canal": "Referral",
+      "typePeriode": "N-1",
+      "trafic": 4470
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "canal": "SEA",
+      "typePeriode": "N-1",
+      "trafic": 35066
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "canal": "SEO",
+      "typePeriode": "N-1",
+      "trafic": 126976
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "canal": "Social Media",
+      "typePeriode": "N-1",
+      "trafic": 1117
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "canal": "Direct",
+      "typePeriode": "N-1",
+      "trafic": 27681
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "canal": "IA Générative",
+      "typePeriode": "N-1",
+      "trafic": 705
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "canal": "Referral",
+      "typePeriode": "N-1",
+      "trafic": 2067
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "canal": "SEA",
+      "typePeriode": "N-1",
+      "trafic": 5538
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "canal": "SEO",
+      "typePeriode": "N-1",
+      "trafic": 89221
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "canal": "Social Media",
+      "typePeriode": "N-1",
+      "trafic": 994
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "canal": "Direct",
+      "typePeriode": "N-1",
+      "trafic": 26965
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "canal": "IA Générative",
+      "typePeriode": "N-1",
+      "trafic": 595
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "canal": "Referral",
+      "typePeriode": "N-1",
+      "trafic": 1261
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "canal": "SEA",
+      "typePeriode": "N-1",
+      "trafic": 19953
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "canal": "SEO",
+      "typePeriode": "N-1",
+      "trafic": 72565
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "canal": "Social Media",
+      "typePeriode": "N-1",
+      "trafic": 733
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "canal": "Direct",
+      "typePeriode": "N-1",
+      "trafic": 34532
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "canal": "IA Générative",
+      "typePeriode": "N-1",
+      "trafic": 676
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "canal": "Referral",
+      "typePeriode": "N-1",
+      "trafic": 1219
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "canal": "SEA",
+      "typePeriode": "N-1",
+      "trafic": 25349
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "canal": "SEO",
+      "typePeriode": "N-1",
+      "trafic": 70930
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "canal": "Social Media",
+      "typePeriode": "N-1",
+      "trafic": 1152
+    },
     {
       "annee": 2026,
       "mois": "2026-01-01",
@@ -437,9 +1739,154 @@
       "canal": "Social Media",
       "typePeriode": "Réel",
       "trafic": 2422
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "canal": "CRM",
+      "typePeriode": "Réel",
+      "trafic": 6
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "canal": "Direct",
+      "typePeriode": "Réel",
+      "trafic": 38081
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "canal": "IA Générative",
+      "typePeriode": "Réel",
+      "trafic": 1244
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "canal": "Referral",
+      "typePeriode": "Réel",
+      "trafic": 8494
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "canal": "SEA",
+      "typePeriode": "Réel",
+      "trafic": 125402
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "canal": "SEO",
+      "typePeriode": "Réel",
+      "trafic": 154854
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "canal": "Social Media",
+      "typePeriode": "Réel",
+      "trafic": 1951
     }
   ],
   "seoMonthly": [
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 203048,
+      "clickouts": 97842
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 185550,
+      "clickouts": 87582
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 206833,
+      "clickouts": 93651
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 216910,
+      "clickouts": 91256
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 256600,
+      "clickouts": 115036
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 305349,
+      "clickouts": 134210
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 373193,
+      "clickouts": 169421
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 339834,
+      "clickouts": 142697
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 126976,
+      "clickouts": 43540
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 89221,
+      "clickouts": 38234
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 72565,
+      "clickouts": 34384
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 70930,
+      "clickouts": 36347
+    },
     {
       "annee": 2026,
       "mois": "2026-01-01",
@@ -471,9 +1918,125 @@
       "origine": "Réel",
       "trafic": 208132,
       "clickouts": 91196
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 154854,
+      "clickouts": 66918
     }
   ],
   "seoPerPortail": [
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "AC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 3529,
+      "clickouts": 1413
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "AC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 3193,
+      "clickouts": 1177
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "AC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 3928,
+      "clickouts": 1385
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "AC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 4141,
+      "clickouts": 1342
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "AC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 4876,
+      "clickouts": 1514
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "AC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 6469,
+      "clickouts": 1953
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "AC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 6753,
+      "clickouts": 1910
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "AC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 5494,
+      "clickouts": 1460
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "AC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 1719,
+      "clickouts": 431
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "AC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 860,
+      "clickouts": 255
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "AC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 721,
+      "clickouts": 236
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "AC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 591,
+      "clickouts": 229
+    },
     {
       "annee": 2026,
       "mois": "2026-01-01",
@@ -509,6 +2072,123 @@
       "origine": "Réel",
       "trafic": 1040,
       "clickouts": 365
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "AC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 681,
+      "clickouts": 227
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "C2B",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 14623,
+      "clickouts": 1083
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "C2B",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 14871,
+      "clickouts": 1036
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "C2B",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 16485,
+      "clickouts": 1172
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "C2B",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 18547,
+      "clickouts": 1151
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "C2B",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 24532,
+      "clickouts": 1525
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "C2B",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 30565,
+      "clickouts": 1598
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "C2B",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 44647,
+      "clickouts": 2080
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "C2B",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 48124,
+      "clickouts": 1867
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "C2B",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 18570,
+      "clickouts": 582
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "C2B",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 7387,
+      "clickouts": 322
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "C2B",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 4641,
+      "clickouts": 281
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "C2B",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 4486,
+      "clickouts": 325
     },
     {
       "annee": 2026,
@@ -548,6 +2228,123 @@
     },
     {
       "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "C2B",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 15564,
+      "clickouts": 704
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "CD",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 160214,
+      "clickouts": 91426
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "CD",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 143576,
+      "clickouts": 81350
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "CD",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 159518,
+      "clickouts": 86353
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "CD",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 164927,
+      "clickouts": 83487
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "CD",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 193873,
+      "clickouts": 105608
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "CD",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 228474,
+      "clickouts": 123259
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "CD",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 271579,
+      "clickouts": 157335
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "CD",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 245814,
+      "clickouts": 133364
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "CD",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 90831,
+      "clickouts": 40163
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "CD",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 69601,
+      "clickouts": 35995
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "CD",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 57635,
+      "clickouts": 32479
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "CD",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 57627,
+      "clickouts": 34468
+    },
+    {
+      "annee": 2026,
       "mois": "2026-01-01",
       "portail": "CD",
       "typePeriode": "Réel",
@@ -581,6 +2378,123 @@
       "origine": "Réel",
       "trafic": 169825,
       "clickouts": 86571
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "CD",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 122214,
+      "clickouts": 63238
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "CSV",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 9648,
+      "clickouts": 834
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "CSV",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 10194,
+      "clickouts": 1061
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "CSV",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 10940,
+      "clickouts": 1081
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "CSV",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 11854,
+      "clickouts": 1216
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "CSV",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 13046,
+      "clickouts": 1436
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "CSV",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 15219,
+      "clickouts": 1472
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "CSV",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 21136,
+      "clickouts": 1961
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "CSV",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 18256,
+      "clickouts": 1839
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "CSV",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 4890,
+      "clickouts": 507
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "CSV",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 3029,
+      "clickouts": 297
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "CSV",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 3268,
+      "clickouts": 271
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "CSV",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 3226,
+      "clickouts": 342
     },
     {
       "annee": 2026,
@@ -620,6 +2534,123 @@
     },
     {
       "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "CSV",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 6525,
+      "clickouts": 843
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "IB",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 4787,
+      "clickouts": 1511
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "IB",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 5456,
+      "clickouts": 1743
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "IB",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 6959,
+      "clickouts": 2319
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "IB",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 7936,
+      "clickouts": 2618
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "IB",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 8651,
+      "clickouts": 3031
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "IB",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 11050,
+      "clickouts": 3861
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "IB",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 12016,
+      "clickouts": 4001
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "IB",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 7500,
+      "clickouts": 2345
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "IB",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 2494,
+      "clickouts": 543
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "IB",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 1659,
+      "clickouts": 358
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "IB",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 1555,
+      "clickouts": 423
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "IB",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 1358,
+      "clickouts": 353
+    },
+    {
+      "annee": 2026,
       "mois": "2026-01-01",
       "portail": "IB",
       "typePeriode": "Réel",
@@ -653,6 +2684,123 @@
       "origine": "Réel",
       "trafic": 4534,
       "clickouts": 1316
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "IB",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 3237,
+      "clickouts": 926
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "MC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 4555,
+      "clickouts": 0
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "MC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 4180,
+      "clickouts": 0
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "MC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 4159,
+      "clickouts": 0
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "MC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 3951,
+      "clickouts": 0
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "MC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 4544,
+      "clickouts": 0
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "MC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 5550,
+      "clickouts": 0
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "MC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 8116,
+      "clickouts": 0
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "MC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 6496,
+      "clickouts": 0
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "MC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 3487,
+      "clickouts": 0
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "MC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 3255,
+      "clickouts": 0
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "MC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 2430,
+      "clickouts": 0
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "MC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 1892,
+      "clickouts": 0
     },
     {
       "annee": 2026,
@@ -692,6 +2840,123 @@
     },
     {
       "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "MC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 3300,
+      "clickouts": 0
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "portail": "UC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 5692,
+      "clickouts": 1575
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "portail": "UC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 4080,
+      "clickouts": 1215
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "portail": "UC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 4844,
+      "clickouts": 1341
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "portail": "UC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 5554,
+      "clickouts": 1442
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "portail": "UC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 7078,
+      "clickouts": 1922
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "portail": "UC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 8022,
+      "clickouts": 2067
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "portail": "UC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 8946,
+      "clickouts": 2134
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "portail": "UC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 8150,
+      "clickouts": 1822
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "portail": "UC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 4985,
+      "clickouts": 1314
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "portail": "UC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 3430,
+      "clickouts": 1007
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "portail": "UC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 2315,
+      "clickouts": 694
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "portail": "UC",
+      "typePeriode": "N-1",
+      "origine": "Réel",
+      "trafic": 1750,
+      "clickouts": 630
+    },
+    {
+      "annee": 2026,
       "mois": "2026-01-01",
       "portail": "UC",
       "typePeriode": "Réel",
@@ -725,9 +2990,3637 @@
       "origine": "Réel",
       "trafic": 3489,
       "clickouts": 1053
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "portail": "UC",
+      "typePeriode": "Réel",
+      "origine": "Réel",
+      "trafic": 3333,
+      "clickouts": 980
     }
   ],
   "seaByCountry": [
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "France",
+      "typePeriode": "N-1",
+      "clickouts": 31701
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Allemagne",
+      "typePeriode": "N-1",
+      "clickouts": 6188
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "N-1",
+      "clickouts": 4831
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Espagne",
+      "typePeriode": "N-1",
+      "clickouts": 1142
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Belgique",
+      "typePeriode": "N-1",
+      "clickouts": 1069
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Italie",
+      "typePeriode": "N-1",
+      "clickouts": 1061
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Autriche",
+      "typePeriode": "N-1",
+      "clickouts": 318
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Suisse",
+      "typePeriode": "N-1",
+      "clickouts": 224
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Luxembourg",
+      "typePeriode": "N-1",
+      "clickouts": 41
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "United kingdom",
+      "typePeriode": "N-1",
+      "clickouts": 28
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Norway",
+      "typePeriode": "N-1",
+      "clickouts": 15
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Hungary",
+      "typePeriode": "N-1",
+      "clickouts": 10
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Denmark",
+      "typePeriode": "N-1",
+      "clickouts": 9
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Czech republic",
+      "typePeriode": "N-1",
+      "clickouts": 8
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Thailand",
+      "typePeriode": "N-1",
+      "clickouts": 8
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Romania",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Slovenia",
+      "typePeriode": "N-1",
+      "clickouts": 6
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Liechtenstein",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "United states",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Croatia",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Ireland",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Slovakia (slovak republic)",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Andorra",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Malta",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Pologne",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "South africa",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Sweden",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Estonia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Iceland",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Maldives",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Portugal",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-01-01",
+      "pays": "Sri lanka",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "France",
+      "typePeriode": "N-1",
+      "clickouts": 54230
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Allemagne",
+      "typePeriode": "N-1",
+      "clickouts": 5059
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Italie",
+      "typePeriode": "N-1",
+      "clickouts": 3100
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "N-1",
+      "clickouts": 3046
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Espagne",
+      "typePeriode": "N-1",
+      "clickouts": 1450
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Belgique",
+      "typePeriode": "N-1",
+      "clickouts": 1397
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Suisse",
+      "typePeriode": "N-1",
+      "clickouts": 416
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Autriche",
+      "typePeriode": "N-1",
+      "clickouts": 247
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Luxembourg",
+      "typePeriode": "N-1",
+      "clickouts": 50
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "United states",
+      "typePeriode": "N-1",
+      "clickouts": 23
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "United kingdom",
+      "typePeriode": "N-1",
+      "clickouts": 21
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Malaysia",
+      "typePeriode": "N-1",
+      "clickouts": 15
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Hungary",
+      "typePeriode": "N-1",
+      "clickouts": 12
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Morocco",
+      "typePeriode": "N-1",
+      "clickouts": 11
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Portugal",
+      "typePeriode": "N-1",
+      "clickouts": 9
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Sweden",
+      "typePeriode": "N-1",
+      "clickouts": 9
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Israel",
+      "typePeriode": "N-1",
+      "clickouts": 8
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Norway",
+      "typePeriode": "N-1",
+      "clickouts": 8
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Canada",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Kenya",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Slovakia (slovak republic)",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Pologne",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Serbia",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Algeria",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Czech republic",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Ireland",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Malta",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "United arab emirates",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Mauritius",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Romania",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Thailand",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Cambodia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Cameroon",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Greece",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Jersey",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Monaco",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Panama",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Tunisia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-02-01",
+      "pays": "Viet nam",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "France",
+      "typePeriode": "N-1",
+      "clickouts": 45184
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Allemagne",
+      "typePeriode": "N-1",
+      "clickouts": 7863
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Italie",
+      "typePeriode": "N-1",
+      "clickouts": 3344
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "N-1",
+      "clickouts": 2135
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Espagne",
+      "typePeriode": "N-1",
+      "clickouts": 1881
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Belgique",
+      "typePeriode": "N-1",
+      "clickouts": 1753
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Suisse",
+      "typePeriode": "N-1",
+      "clickouts": 901
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Autriche",
+      "typePeriode": "N-1",
+      "clickouts": 445
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Luxembourg",
+      "typePeriode": "N-1",
+      "clickouts": 62
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "United kingdom",
+      "typePeriode": "N-1",
+      "clickouts": 38
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Canada",
+      "typePeriode": "N-1",
+      "clickouts": 23
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Croatia",
+      "typePeriode": "N-1",
+      "clickouts": 19
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Morocco",
+      "typePeriode": "N-1",
+      "clickouts": 19
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Sweden",
+      "typePeriode": "N-1",
+      "clickouts": 17
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Denmark",
+      "typePeriode": "N-1",
+      "clickouts": 14
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Ireland",
+      "typePeriode": "N-1",
+      "clickouts": 13
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "United states",
+      "typePeriode": "N-1",
+      "clickouts": 11
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Thailand",
+      "typePeriode": "N-1",
+      "clickouts": 10
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Israel",
+      "typePeriode": "N-1",
+      "clickouts": 8
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Senegal",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Liechtenstein",
+      "typePeriode": "N-1",
+      "clickouts": 6
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Norway",
+      "typePeriode": "N-1",
+      "clickouts": 6
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Pologne",
+      "typePeriode": "N-1",
+      "clickouts": 6
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Czech republic",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Hungary",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Egypt",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Ukraine",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Greece",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Portugal",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Brazil",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Dominican republic",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Finland",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "India",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Malta",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Mauritius",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Monaco",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "New zealand",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Slovakia (slovak republic)",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Slovenia",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Tunisia",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "United arab emirates",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Albania",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Andorra",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Argentina",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Australia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Cote d ivoire",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Hong kong",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Indonesia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Lithuania",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Mauritania",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Qatar",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Romania",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Seychelles",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-03-01",
+      "pays": "Turkey",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "France",
+      "typePeriode": "N-1",
+      "clickouts": 53811
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Allemagne",
+      "typePeriode": "N-1",
+      "clickouts": 8395
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Italie",
+      "typePeriode": "N-1",
+      "clickouts": 2306
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "N-1",
+      "clickouts": 1869
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Belgique",
+      "typePeriode": "N-1",
+      "clickouts": 1672
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Espagne",
+      "typePeriode": "N-1",
+      "clickouts": 1344
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Suisse",
+      "typePeriode": "N-1",
+      "clickouts": 1216
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Autriche",
+      "typePeriode": "N-1",
+      "clickouts": 392
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Luxembourg",
+      "typePeriode": "N-1",
+      "clickouts": 95
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Canada",
+      "typePeriode": "N-1",
+      "clickouts": 40
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "United kingdom",
+      "typePeriode": "N-1",
+      "clickouts": 32
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Morocco",
+      "typePeriode": "N-1",
+      "clickouts": 22
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "United states",
+      "typePeriode": "N-1",
+      "clickouts": 21
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Algeria",
+      "typePeriode": "N-1",
+      "clickouts": 18
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Norway",
+      "typePeriode": "N-1",
+      "clickouts": 15
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Denmark",
+      "typePeriode": "N-1",
+      "clickouts": 14
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Tunisia",
+      "typePeriode": "N-1",
+      "clickouts": 14
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Portugal",
+      "typePeriode": "N-1",
+      "clickouts": 12
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Hungary",
+      "typePeriode": "N-1",
+      "clickouts": 11
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Ireland",
+      "typePeriode": "N-1",
+      "clickouts": 11
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Slovenia",
+      "typePeriode": "N-1",
+      "clickouts": 9
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Sweden",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Senegal",
+      "typePeriode": "N-1",
+      "clickouts": 6
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Czech republic",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Thailand",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Andorra",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Egypt",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Malta",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Pologne",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Brazil",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Indonesia",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Monaco",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Turkey",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "United arab emirates",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Estonia",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Greece",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Mauritius",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Montenegro",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Seychelles",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Albania",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Benin",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Bulgaria",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Cameroon",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Cyprus",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Dominican republic",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Finland",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Kenya",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Liechtenstein",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Lithuania",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Madagascar",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Malaysia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Nigeria",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Romania",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Saudi arabia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Slovakia (slovak republic)",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "South africa",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-04-01",
+      "pays": "Uruguay",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "France",
+      "typePeriode": "N-1",
+      "clickouts": 73221
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Allemagne",
+      "typePeriode": "N-1",
+      "clickouts": 12251
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "N-1",
+      "clickouts": 4883
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Belgique",
+      "typePeriode": "N-1",
+      "clickouts": 3097
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Italie",
+      "typePeriode": "N-1",
+      "clickouts": 3061
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Suisse",
+      "typePeriode": "N-1",
+      "clickouts": 1926
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Espagne",
+      "typePeriode": "N-1",
+      "clickouts": 1725
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Autriche",
+      "typePeriode": "N-1",
+      "clickouts": 703
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Luxembourg",
+      "typePeriode": "N-1",
+      "clickouts": 129
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "United kingdom",
+      "typePeriode": "N-1",
+      "clickouts": 56
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "United states",
+      "typePeriode": "N-1",
+      "clickouts": 37
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Canada",
+      "typePeriode": "N-1",
+      "clickouts": 23
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Denmark",
+      "typePeriode": "N-1",
+      "clickouts": 22
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Norway",
+      "typePeriode": "N-1",
+      "clickouts": 17
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Andorra",
+      "typePeriode": "N-1",
+      "clickouts": 14
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Tunisia",
+      "typePeriode": "N-1",
+      "clickouts": 14
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Morocco",
+      "typePeriode": "N-1",
+      "clickouts": 10
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Pologne",
+      "typePeriode": "N-1",
+      "clickouts": 9
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Croatia",
+      "typePeriode": "N-1",
+      "clickouts": 8
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "N/A",
+      "typePeriode": "N-1",
+      "clickouts": 8
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Portugal",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Sweden",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Czech republic",
+      "typePeriode": "N-1",
+      "clickouts": 6
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Monaco",
+      "typePeriode": "N-1",
+      "clickouts": 6
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Algeria",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Ireland",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Liechtenstein",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Slovenia",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Turkey",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Albania",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Bosnia and herzegovina",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Greece",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Hungary",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Indonesia",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Latvia",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Lithuania",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Madagascar",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Seychelles",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Togo",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Bolivia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Colombia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Finland",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Hong kong",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "India",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Israel",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Japan",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Kenya",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Mexico",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Montenegro",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Romania",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Senegal",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Singapore",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Sri lanka",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-05-01",
+      "pays": "Thailand",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "France",
+      "typePeriode": "N-1",
+      "clickouts": 105471
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Allemagne",
+      "typePeriode": "N-1",
+      "clickouts": 21744
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Espagne",
+      "typePeriode": "N-1",
+      "clickouts": 7833
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Italie",
+      "typePeriode": "N-1",
+      "clickouts": 7209
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "N-1",
+      "clickouts": 6690
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Belgique",
+      "typePeriode": "N-1",
+      "clickouts": 5677
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Suisse",
+      "typePeriode": "N-1",
+      "clickouts": 2447
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Autriche",
+      "typePeriode": "N-1",
+      "clickouts": 1200
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Luxembourg",
+      "typePeriode": "N-1",
+      "clickouts": 188
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "United kingdom",
+      "typePeriode": "N-1",
+      "clickouts": 140
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "United states",
+      "typePeriode": "N-1",
+      "clickouts": 102
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Croatia",
+      "typePeriode": "N-1",
+      "clickouts": 38
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Denmark",
+      "typePeriode": "N-1",
+      "clickouts": 38
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Pologne",
+      "typePeriode": "N-1",
+      "clickouts": 38
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Norway",
+      "typePeriode": "N-1",
+      "clickouts": 29
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Canada",
+      "typePeriode": "N-1",
+      "clickouts": 25
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Algeria",
+      "typePeriode": "N-1",
+      "clickouts": 24
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Portugal",
+      "typePeriode": "N-1",
+      "clickouts": 22
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Malta",
+      "typePeriode": "N-1",
+      "clickouts": 18
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Morocco",
+      "typePeriode": "N-1",
+      "clickouts": 17
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Hungary",
+      "typePeriode": "N-1",
+      "clickouts": 14
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Ireland",
+      "typePeriode": "N-1",
+      "clickouts": 14
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Finland",
+      "typePeriode": "N-1",
+      "clickouts": 12
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Czech republic",
+      "typePeriode": "N-1",
+      "clickouts": 11
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Slovenia",
+      "typePeriode": "N-1",
+      "clickouts": 11
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Sweden",
+      "typePeriode": "N-1",
+      "clickouts": 11
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Andorra",
+      "typePeriode": "N-1",
+      "clickouts": 10
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Greece",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Monaco",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Tunisia",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Romania",
+      "typePeriode": "N-1",
+      "clickouts": 6
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Mauritius",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Mexico",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Israel",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Lithuania",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Albania",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Bangladesh",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Bosnia and herzegovina",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Slovakia (slovak republic)",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Brazil",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Bulgaria",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Colombia",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Estonia",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Liechtenstein",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Seychelles",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "N/A",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Australia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Costa rica",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Cote d ivoire",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Egypt",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "India",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Maldives",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Qatar",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Saudi arabia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Singapore",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "South korea",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Thailand",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Turkey",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "United arab emirates",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-06-01",
+      "pays": "Viet nam",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "France",
+      "typePeriode": "N-1",
+      "clickouts": 194099
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Allemagne",
+      "typePeriode": "N-1",
+      "clickouts": 22190
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Belgique",
+      "typePeriode": "N-1",
+      "clickouts": 10118
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Espagne",
+      "typePeriode": "N-1",
+      "clickouts": 9805
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "N-1",
+      "clickouts": 8257
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Italie",
+      "typePeriode": "N-1",
+      "clickouts": 8195
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Suisse",
+      "typePeriode": "N-1",
+      "clickouts": 3278
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Autriche",
+      "typePeriode": "N-1",
+      "clickouts": 1498
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Luxembourg",
+      "typePeriode": "N-1",
+      "clickouts": 248
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "United kingdom",
+      "typePeriode": "N-1",
+      "clickouts": 219
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "United states",
+      "typePeriode": "N-1",
+      "clickouts": 144
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Norway",
+      "typePeriode": "N-1",
+      "clickouts": 89
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Croatia",
+      "typePeriode": "N-1",
+      "clickouts": 88
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Portugal",
+      "typePeriode": "N-1",
+      "clickouts": 62
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Morocco",
+      "typePeriode": "N-1",
+      "clickouts": 52
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Denmark",
+      "typePeriode": "N-1",
+      "clickouts": 50
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Canada",
+      "typePeriode": "N-1",
+      "clickouts": 42
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Pologne",
+      "typePeriode": "N-1",
+      "clickouts": 32
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Algeria",
+      "typePeriode": "N-1",
+      "clickouts": 30
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Greece",
+      "typePeriode": "N-1",
+      "clickouts": 27
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Ireland",
+      "typePeriode": "N-1",
+      "clickouts": 25
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Tunisia",
+      "typePeriode": "N-1",
+      "clickouts": 23
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Malta",
+      "typePeriode": "N-1",
+      "clickouts": 22
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Czech republic",
+      "typePeriode": "N-1",
+      "clickouts": 18
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Sweden",
+      "typePeriode": "N-1",
+      "clickouts": 15
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Andorra",
+      "typePeriode": "N-1",
+      "clickouts": 12
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Israel",
+      "typePeriode": "N-1",
+      "clickouts": 12
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Slovenia",
+      "typePeriode": "N-1",
+      "clickouts": 12
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "N/A",
+      "typePeriode": "N-1",
+      "clickouts": 8
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Turkey",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Australia",
+      "typePeriode": "N-1",
+      "clickouts": 6
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Finland",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Hungary",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Cote d ivoire",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Romania",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Bulgaria",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Hong kong",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Monaco",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Albania",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Brazil",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Burkina faso",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Cameroon",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Indonesia",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Kenya",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Lebanon",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Mexico",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Paraguay",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Cambodia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Costa rica",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Dominican republic",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Egypt",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Gambia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Japan",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Liechtenstein",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Mauritius",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Philippines",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "San marino",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Senegal",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Serbia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Slovakia (slovak republic)",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "South africa",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "Thailand",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-07-01",
+      "pays": "United arab emirates",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "France",
+      "typePeriode": "N-1",
+      "clickouts": 107512
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Allemagne",
+      "typePeriode": "N-1",
+      "clickouts": 10556
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Espagne",
+      "typePeriode": "N-1",
+      "clickouts": 4641
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Belgique",
+      "typePeriode": "N-1",
+      "clickouts": 3961
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Italie",
+      "typePeriode": "N-1",
+      "clickouts": 3952
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "N-1",
+      "clickouts": 1893
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Suisse",
+      "typePeriode": "N-1",
+      "clickouts": 1568
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Autriche",
+      "typePeriode": "N-1",
+      "clickouts": 754
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Luxembourg",
+      "typePeriode": "N-1",
+      "clickouts": 130
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "United kingdom",
+      "typePeriode": "N-1",
+      "clickouts": 130
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "United states",
+      "typePeriode": "N-1",
+      "clickouts": 54
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Norway",
+      "typePeriode": "N-1",
+      "clickouts": 47
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Portugal",
+      "typePeriode": "N-1",
+      "clickouts": 47
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Morocco",
+      "typePeriode": "N-1",
+      "clickouts": 41
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Croatia",
+      "typePeriode": "N-1",
+      "clickouts": 36
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Algeria",
+      "typePeriode": "N-1",
+      "clickouts": 27
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Canada",
+      "typePeriode": "N-1",
+      "clickouts": 25
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Greece",
+      "typePeriode": "N-1",
+      "clickouts": 18
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Czech republic",
+      "typePeriode": "N-1",
+      "clickouts": 13
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Denmark",
+      "typePeriode": "N-1",
+      "clickouts": 12
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Tunisia",
+      "typePeriode": "N-1",
+      "clickouts": 12
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Ireland",
+      "typePeriode": "N-1",
+      "clickouts": 10
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Sweden",
+      "typePeriode": "N-1",
+      "clickouts": 10
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Malta",
+      "typePeriode": "N-1",
+      "clickouts": 9
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Pologne",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Bulgaria",
+      "typePeriode": "N-1",
+      "clickouts": 6
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Andorra",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Japan",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Argentina",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Brazil",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Hungary",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Romania",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Slovenia",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Turkey",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Armenia",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Cape verde",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Indonesia",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Liechtenstein",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Mauritius",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Monaco",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Senegal",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Albania",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Bahamas",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Chile",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Cyprus",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Egypt",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Kenya",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Lithuania",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Peru",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-08-01",
+      "pays": "Thailand",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "France",
+      "typePeriode": "N-1",
+      "clickouts": 14464
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Allemagne",
+      "typePeriode": "N-1",
+      "clickouts": 2930
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Suisse",
+      "typePeriode": "N-1",
+      "clickouts": 1159
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Belgique",
+      "typePeriode": "N-1",
+      "clickouts": 666
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Autriche",
+      "typePeriode": "N-1",
+      "clickouts": 191
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Espagne",
+      "typePeriode": "N-1",
+      "clickouts": 81
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "N-1",
+      "clickouts": 46
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Luxembourg",
+      "typePeriode": "N-1",
+      "clickouts": 42
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Italie",
+      "typePeriode": "N-1",
+      "clickouts": 41
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "United kingdom",
+      "typePeriode": "N-1",
+      "clickouts": 17
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Norway",
+      "typePeriode": "N-1",
+      "clickouts": 11
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Croatia",
+      "typePeriode": "N-1",
+      "clickouts": 10
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Portugal",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Tunisia",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Andorra",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Bulgaria",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Finland",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Mauritius",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Morocco",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Greece",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Ireland",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Denmark",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Hong kong",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Monaco",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Sweden",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Tanzania",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Algeria",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Australia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Canada",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "China",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Hungary",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Japan",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Madagascar",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Romania",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Slovenia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "South africa",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-09-01",
+      "pays": "Viet nam",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "Allemagne",
+      "typePeriode": "N-1",
+      "clickouts": 1742
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "Suisse",
+      "typePeriode": "N-1",
+      "clickouts": 402
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "Autriche",
+      "typePeriode": "N-1",
+      "clickouts": 86
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "France",
+      "typePeriode": "N-1",
+      "clickouts": 36
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "Luxembourg",
+      "typePeriode": "N-1",
+      "clickouts": 22
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "N-1",
+      "clickouts": 6
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "Italie",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "Croatia",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "Belgique",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "Greece",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "Hungary",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "Espagne",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "Czech republic",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-10-01",
+      "pays": "Denmark",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "France",
+      "typePeriode": "N-1",
+      "clickouts": 10754
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Allemagne",
+      "typePeriode": "N-1",
+      "clickouts": 2499
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "N-1",
+      "clickouts": 1019
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Belgique",
+      "typePeriode": "N-1",
+      "clickouts": 855
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Suisse",
+      "typePeriode": "N-1",
+      "clickouts": 661
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Autriche",
+      "typePeriode": "N-1",
+      "clickouts": 123
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Espagne",
+      "typePeriode": "N-1",
+      "clickouts": 25
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Luxembourg",
+      "typePeriode": "N-1",
+      "clickouts": 19
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Canada",
+      "typePeriode": "N-1",
+      "clickouts": 8
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Italie",
+      "typePeriode": "N-1",
+      "clickouts": 7
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "United states",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Norway",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Morocco",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Portugal",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Tanzania",
+      "typePeriode": "N-1",
+      "clickouts": 3
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Australia",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Cape verde",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Turkey",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Andorra",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Bulgaria",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Congo",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Egypt",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Ireland",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "Liechtenstein",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-11-01",
+      "pays": "United kingdom",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "France",
+      "typePeriode": "N-1",
+      "clickouts": 10907
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Allemagne",
+      "typePeriode": "N-1",
+      "clickouts": 3256
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "N-1",
+      "clickouts": 791
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Belgique",
+      "typePeriode": "N-1",
+      "clickouts": 760
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Suisse",
+      "typePeriode": "N-1",
+      "clickouts": 677
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Autriche",
+      "typePeriode": "N-1",
+      "clickouts": 246
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Luxembourg",
+      "typePeriode": "N-1",
+      "clickouts": 51
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Espagne",
+      "typePeriode": "N-1",
+      "clickouts": 39
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Canada",
+      "typePeriode": "N-1",
+      "clickouts": 15
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Italie",
+      "typePeriode": "N-1",
+      "clickouts": 13
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "United kingdom",
+      "typePeriode": "N-1",
+      "clickouts": 9
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Portugal",
+      "typePeriode": "N-1",
+      "clickouts": 6
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Andorra",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Ireland",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "United states",
+      "typePeriode": "N-1",
+      "clickouts": 5
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Chile",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Lebanon",
+      "typePeriode": "N-1",
+      "clickouts": 4
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Gabon",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Morocco",
+      "typePeriode": "N-1",
+      "clickouts": 2
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Albania",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Algeria",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Australia",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Cyprus",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Czech republic",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Denmark",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Hong kong",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Israel",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Madagascar",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "New zealand",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Romania",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Sweden",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
+    {
+      "annee": 2025,
+      "mois": "2025-12-01",
+      "pays": "Ukraine",
+      "typePeriode": "N-1",
+      "clickouts": 1
+    },
     {
       "annee": 2026,
       "mois": "2026-01-01",
@@ -2041,6 +7934,314 @@
       "annee": 2026,
       "mois": "2026-04-01",
       "pays": "United arab emirates",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "France",
+      "typePeriode": "Réel",
+      "clickouts": 52088
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Allemagne",
+      "typePeriode": "Réel",
+      "clickouts": 17840
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Pays-Bas",
+      "typePeriode": "Réel",
+      "clickouts": 5835
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Italie",
+      "typePeriode": "Réel",
+      "clickouts": 2823
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Belgique",
+      "typePeriode": "Réel",
+      "clickouts": 2057
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Suisse",
+      "typePeriode": "Réel",
+      "clickouts": 1177
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Autriche",
+      "typePeriode": "Réel",
+      "clickouts": 993
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Luxembourg",
+      "typePeriode": "Réel",
+      "clickouts": 74
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Espagne",
+      "typePeriode": "Réel",
+      "clickouts": 68
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "United kingdom",
+      "typePeriode": "Réel",
+      "clickouts": 25
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Canada",
+      "typePeriode": "Réel",
+      "clickouts": 21
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Morocco",
+      "typePeriode": "Réel",
+      "clickouts": 17
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "United states",
+      "typePeriode": "Réel",
+      "clickouts": 14
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Colombia",
+      "typePeriode": "Réel",
+      "clickouts": 13
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Portugal",
+      "typePeriode": "Réel",
+      "clickouts": 13
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Andorra",
+      "typePeriode": "Réel",
+      "clickouts": 12
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Croatia",
+      "typePeriode": "Réel",
+      "clickouts": 12
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Czech republic",
+      "typePeriode": "Réel",
+      "clickouts": 11
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Greece",
+      "typePeriode": "Réel",
+      "clickouts": 10
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Slovenia",
+      "typePeriode": "Réel",
+      "clickouts": 10
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Algeria",
+      "typePeriode": "Réel",
+      "clickouts": 8
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Norway",
+      "typePeriode": "Réel",
+      "clickouts": 6
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Bulgaria",
+      "typePeriode": "Réel",
+      "clickouts": 5
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Denmark",
+      "typePeriode": "Réel",
+      "clickouts": 5
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Hungary",
+      "typePeriode": "Réel",
+      "clickouts": 4
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Pologne",
+      "typePeriode": "Réel",
+      "clickouts": 4
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Romania",
+      "typePeriode": "Réel",
+      "clickouts": 3
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Tunisia",
+      "typePeriode": "Réel",
+      "clickouts": 3
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Albania",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Cameroon",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Ireland",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Lebanon",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Liechtenstein",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Madagascar",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Mauritius",
+      "typePeriode": "Réel",
+      "clickouts": 2
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Australia",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Cote d ivoire",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Ecuador",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Finland",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Monaco",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Niger",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Slovakia (slovak republic)",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Sweden",
+      "typePeriode": "Réel",
+      "clickouts": 1
+    },
+    {
+      "annee": 2026,
+      "mois": "2026-05-01",
+      "pays": "Ukraine",
       "typePeriode": "Réel",
       "clickouts": 1
     }
