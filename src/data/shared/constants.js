@@ -36,6 +36,45 @@ export const monthOfIso = (iso) => {
   return FRENCH_MONTHS[idx] ?? null;
 };
 
+// Manipulation de périodes "YYYY-MM" (format de <input type="month">)
+// -----------------------------------------------------------------------------
+
+export const isoToYM = (iso) => (iso ? String(iso).slice(0, 7) : null);
+export const ymToIso = (ym) => (ym ? `${ym}-01` : null);
+
+// Liste les ISO YYYY-MM-01 entre 2 YYYY-MM (inclus).
+export const isoMonthsBetween = (fromYM, toYM) => {
+  if (!fromYM || !toYM || fromYM > toYM) return [];
+  const result = [];
+  let [y, m] = fromYM.split('-').map(Number);
+  const [endY, endM] = toYM.split('-').map(Number);
+  while (y < endY || (y === endY && m <= endM)) {
+    result.push(`${String(y).padStart(4, '0')}-${String(m).padStart(2, '0')}-01`);
+    m++;
+    if (m > 12) { m = 1; y++; }
+  }
+  return result;
+};
+
+// Décale un YYYY-MM d'un nombre d'années (négatif = passé).
+export const shiftYMByYears = (ym, deltaYears) => {
+  if (!ym) return null;
+  const [y, m] = ym.split('-');
+  return `${parseInt(y, 10) + deltaYears}-${m}`;
+};
+
+// Libellé "Jan 2026 → Mai 2026" pour afficher une plage.
+export const formatPeriodLabel = (fromYM, toYM) => {
+  if (!fromYM || !toYM) return '—';
+  const monthShort = (ym) => {
+    const [y, m] = ym.split('-');
+    const idx = parseInt(m, 10) - 1;
+    return `${(FRENCH_MONTHS[idx] ?? '').slice(0, 3)} ${y}`;
+  };
+  if (fromYM === toYM) return monthShort(fromYM);
+  return `${monthShort(fromYM)} → ${monthShort(toYM)}`;
+};
+
 // Codes portails (utilisés tels quels dans les sources et dans la UI).
 export const PORTAIL_CODES = ['CD', 'C2B', 'CSV', 'IB', 'AC', 'UC', 'MC'];
 

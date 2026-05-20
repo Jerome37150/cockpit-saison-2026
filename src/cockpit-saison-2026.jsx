@@ -25,6 +25,7 @@ import {
   SYNCED_AT,
   SYNCED_AT_BY_SOURCE,
 } from './data';
+import { ACTIVE_MONTHS, COCKPIT_YEAR, monthOfIso, isoMonthsBetween, shiftYMByYears, formatPeriodLabel } from './data/shared/constants.js';
 
 /* =========================================================================
    HELPERS DE FORMATAGE
@@ -143,32 +144,105 @@ const Sidebar = ({ active, setActive, onLogout }) => {
   );
 };
 
-const Header = ({ pageTitle, pageSubtitle, month, setMonth }) => (
-  <header className="px-6 py-3 border-b flex items-center justify-between flex-shrink-0" style={{ borderColor: COLORS.border, background: COLORS.bg }}>
+const PeriodPicker = ({
+  periodFromYM, periodToYM, setPeriodFromYM, setPeriodToYM,
+  compareAuto, setCompareAuto,
+  customCompFromYM, customCompToYM, setCustomCompFromYM, setCustomCompToYM,
+  effectiveCompFromYM, effectiveCompToYM,
+}) => {
+  const ymRangeMin = `${COCKPIT_YEAR - 5}-01`;
+  const ymRangeMax = new Date().toISOString().slice(0, 7);
+  const inputStyle = {
+    color: COLORS.text,
+    fontFamily: 'JetBrains Mono, monospace',
+    background: 'transparent',
+    border: 'none',
+    outline: 'none',
+    padding: '0 4px',
+    colorScheme: 'dark',
+  };
+  return (
+    <div className="flex flex-col gap-1.5 items-end text-[11px]">
+      <div
+        className="flex items-center gap-2 px-2 py-1 rounded-md"
+        style={{ background: COLORS.surface2, border: `1px solid ${COLORS.border}` }}
+      >
+        <Calendar size={12} style={{ color: COLORS.primary }} />
+        <span style={{ color: COLORS.muted, fontFamily: 'Manrope, sans-serif', minWidth: 75 }}>Période</span>
+        <input
+          type="month"
+          value={periodFromYM}
+          min={ymRangeMin}
+          max={periodToYM}
+          onChange={(e) => setPeriodFromYM(e.target.value)}
+          style={inputStyle}
+        />
+        <span style={{ color: COLORS.muted }}>→</span>
+        <input
+          type="month"
+          value={periodToYM}
+          min={periodFromYM}
+          max={ymRangeMax}
+          onChange={(e) => setPeriodToYM(e.target.value)}
+          style={inputStyle}
+        />
+      </div>
+      <div
+        className="flex items-center gap-2 px-2 py-1 rounded-md"
+        style={{ background: COLORS.surface2, border: `1px solid ${COLORS.border}` }}
+      >
+        <span style={{ color: COLORS.muted, fontFamily: 'Manrope, sans-serif', minWidth: 75 }}>Comparaison</span>
+        <label className="inline-flex items-center gap-1 cursor-pointer" style={{ userSelect: 'none' }}>
+          <input
+            type="checkbox"
+            checked={compareAuto}
+            onChange={(e) => setCompareAuto(e.target.checked)}
+            style={{ accentColor: COLORS.primary }}
+          />
+          <span style={{ color: COLORS.text, fontFamily: 'Manrope, sans-serif' }}>même période N-1</span>
+        </label>
+        {compareAuto ? (
+          <span style={{ color: COLORS.primary, fontFamily: 'JetBrains Mono, monospace', marginLeft: 4 }}>
+            ({formatPeriodLabel(effectiveCompFromYM, effectiveCompToYM)})
+          </span>
+        ) : (
+          <>
+            <input
+              type="month"
+              value={customCompFromYM}
+              min={ymRangeMin}
+              max={customCompToYM}
+              onChange={(e) => setCustomCompFromYM(e.target.value)}
+              style={inputStyle}
+            />
+            <span style={{ color: COLORS.muted }}>→</span>
+            <input
+              type="month"
+              value={customCompToYM}
+              min={customCompFromYM}
+              max={ymRangeMax}
+              onChange={(e) => setCustomCompToYM(e.target.value)}
+              style={inputStyle}
+            />
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+const Header = ({ pageTitle, pageSubtitle, pickerProps }) => (
+  <header
+    className="px-6 py-3 border-b flex items-start justify-between flex-shrink-0"
+    style={{ borderColor: COLORS.border, background: COLORS.bg }}
+  >
     <div>
       <h1 style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 800, fontSize: 22, letterSpacing: '-0.025em', lineHeight: 1.1 }}>
         {pageTitle}
       </h1>
       <p className="text-xs mt-0.5" style={{ color: COLORS.muted }}>{pageSubtitle}</p>
     </div>
-    <div className="flex items-center gap-1 px-1 py-1 rounded-lg" style={{ background: COLORS.surface2, border: `1px solid ${COLORS.border}` }}>
-      <Calendar size={12} style={{ color: COLORS.primary, marginLeft: 6 }} />
-      {MONTHS.map((m) => (
-        <button
-          key={m}
-          onClick={() => setMonth(m)}
-          className="px-2.5 py-1 rounded-md text-[11px] transition-all"
-          style={{
-            fontFamily: 'Manrope, sans-serif',
-            fontWeight: month === m ? 700 : 500,
-            background: month === m ? COLORS.primary : 'transparent',
-            color: month === m ? '#000' : COLORS.text,
-          }}
-        >
-          {m === 'cumul' ? 'Cumul' : m.charAt(0).toUpperCase() + m.slice(1, 4)}
-        </button>
-      ))}
-    </div>
+    <PeriodPicker {...pickerProps} />
   </header>
 );
 
@@ -314,7 +388,9 @@ const axisStyle = {
    HELPERS DE LECTURE
    ========================================================================= */
 
-const M_LIST = ['janvier', 'février', 'mars', 'avril'];
+// Convertit une liste d'ISO YYYY-MM-01 en noms de mois français (pour
+// rester compatible avec les clés des aggregators GLOBAL[m], PORTAILS[m], etc.).
+const isoToFrenchMonths = (isoMonths) => (isoMonths ?? []).map((iso) => monthOfIso(iso)).filter(Boolean);
 
 // Somme une clé sur les 4 mois — tolère les valeurs null
 const sumMonths = (obj, key) =>
@@ -348,7 +424,9 @@ const PORTAIL_COLORS = {
    ========================================================================= */
 
 // === DASHBOARD ===
-const DashboardPage = ({ month }) => {
+const DashboardPage = ({ selectedMonths = [], compareMonths = [] }) => {
+  const M_LIST = selectedMonths;
+  const month = selectedMonths.length === 1 ? selectedMonths[0] : 'cumul';
   const isCumul = month === 'cumul';
 
   // Filtre portail : null = tous, sinon clé courte (CD, UC, ...).
@@ -603,7 +681,9 @@ const DashboardPage = ({ month }) => {
 };
 
 // === PORTAILS ===
-const PortailsPage = ({ month }) => {
+const PortailsPage = ({ selectedMonths = [], compareMonths = [] }) => {
+  const M_LIST = selectedMonths;
+  const month = selectedMonths.length === 1 ? selectedMonths[0] : 'cumul';
   const isCumul = month === 'cumul';
   const monthIdx = M_LIST.indexOf(month);
   const prevMonth = monthIdx > 0 ? M_LIST[monthIdx - 1] : null;
@@ -923,7 +1003,9 @@ const SEOPortailModal = ({ portail, onClose }) => {
 };
 
 // === SEA ===
-const SEAPage = ({ month }) => {
+const SEAPage = ({ selectedMonths = [], compareMonths = [] }) => {
+  const M_LIST = selectedMonths;
+  const month = selectedMonths.length === 1 ? selectedMonths[0] : 'cumul';
   const isCumul = month === 'cumul';
   const monthIdx = M_LIST.indexOf(month);
   const prevMonth = monthIdx > 0 ? M_LIST[monthIdx - 1] : null;
@@ -1362,7 +1444,8 @@ const CRMCalendar = ({ campagnes }) => {
   );
 };
 
-const CRMPage = ({ month }) => {
+const CRMPage = ({ selectedMonths = [] }) => {
+  const month = selectedMonths.length === 1 ? selectedMonths[0] : 'cumul';
   if (CRM_BASE === null) {
     return (
       <DataUnavailable
@@ -1489,7 +1572,9 @@ const CRMPage = ({ month }) => {
 // le budget par levier marketing.
 const LEVIER_TO_CANAL = { SEO: 'SEO', SEA: 'SEA', Direct: 'DIRECT', IA: 'IA', RS: 'SOCIAL', CRM: 'CRM' };
 
-const PerformancePage = ({ month }) => {
+const PerformancePage = ({ selectedMonths = [] }) => {
+  const M_LIST = selectedMonths;
+  const month = selectedMonths.length === 1 ? selectedMonths[0] : 'cumul';
   if (BUDGET_LEVIERS === null) {
     return (
       <DataUnavailable
@@ -1702,7 +1787,8 @@ const PerformancePage = ({ month }) => {
 // stratégiques. À terme : remplaçable par un appel LLM (Claude API) pour une
 // analyse contextuelle plus riche.
 
-const buildAnalyseIA = () => {
+const buildAnalyseIA = (selectedMonths = []) => {
+  const M_LIST = selectedMonths;
   // ─── Métriques agrégées ────────────────────────────────────────────────
   const traficYTD = M_LIST.reduce((s, m) => s + (GLOBAL[m]?.trafic ?? 0), 0);
   const traficN1YTD = M_LIST.reduce((s, m) => s + (GLOBAL_N1[m]?.trafic ?? 0), 0);
@@ -1930,7 +2016,7 @@ const PRIORITE_CONFIG = {
   basse:   { label: 'PRIORITÉ BASSE',   color: '#22D3CC' },
 };
 
-const AnalyseIAPage = () => {
+const AnalyseIAPage = ({ selectedMonths = [] }) => {
   if (CRM_BASE === null || BUDGET_LEVIERS === null) {
     return (
       <DataUnavailable
@@ -1944,7 +2030,7 @@ const AnalyseIAPage = () => {
       />
     );
   }
-  const { metriques, forces, risques, recommandations } = buildAnalyseIA();
+  const { metriques, forces, risques, recommandations } = buildAnalyseIA(selectedMonths);
 
   return (
     <div className="h-full flex flex-col gap-3 overflow-y-auto">
@@ -2069,7 +2155,7 @@ const AnalyseIAPage = () => {
 };
 
 // === CLIENTS ===
-const ClientsPage = () => {
+const ClientsPage = ({ selectedMonths = [] }) => {
   if (CLIENTS === null || CAMPINGS === null || CA_PRODUITS === null) {
     return (
       <DataUnavailable
@@ -2471,7 +2557,26 @@ export default function App() {
     }
   });
   const [active, setActive] = useState('dashboard');
-  const [month, setMonth] = useState('avril');
+
+  // Période de pilotage (par défaut : début d'année cockpit → mois courant ou décembre).
+  const todayYM = new Date().toISOString().slice(0, 7);
+  const initialPeriodTo = todayYM.startsWith(String(COCKPIT_YEAR)) ? todayYM : `${COCKPIT_YEAR}-12`;
+  const [periodFromYM, setPeriodFromYM] = useState(`${COCKPIT_YEAR}-01`);
+  const [periodToYM, setPeriodToYM] = useState(initialPeriodTo);
+
+  // Période de comparaison (par défaut : même période N-1, auto).
+  const [compareAuto, setCompareAuto] = useState(true);
+  const [customCompFromYM, setCustomCompFromYM] = useState(shiftYMByYears(`${COCKPIT_YEAR}-01`, -1));
+  const [customCompToYM, setCustomCompToYM] = useState(shiftYMByYears(initialPeriodTo, -1));
+
+  const effectiveCompFromYM = compareAuto ? shiftYMByYears(periodFromYM, -1) : customCompFromYM;
+  const effectiveCompToYM = compareAuto ? shiftYMByYears(periodToYM, -1) : customCompToYM;
+
+  // Tableaux d'ISO + de noms de mois français pour les pages.
+  const periodIsoMonths = isoMonthsBetween(periodFromYM, periodToYM);
+  const compareIsoMonths = isoMonthsBetween(effectiveCompFromYM, effectiveCompToYM);
+  const selectedMonths = isoToFrenchMonths(periodIsoMonths);
+  const compareMonths = isoToFrenchMonths(compareIsoMonths);
 
   useEffect(() => {
     const link = document.createElement('link');
@@ -2512,13 +2617,29 @@ export default function App() {
     <div className="flex h-screen overflow-hidden" style={{ background: COLORS.bg, color: COLORS.text, fontFamily: 'Manrope, sans-serif' }}>
       <Sidebar active={active} setActive={setActive} onLogout={logout} />
       <main className="flex-1 flex flex-col overflow-hidden" style={{ background: COLORS.bg }}>
-        <Header pageTitle={PAGES[active].title} pageSubtitle={PAGES[active].subtitle} month={month} setMonth={setMonth} />
+        <Header
+          pageTitle={PAGES[active].title}
+          pageSubtitle={PAGES[active].subtitle}
+          pickerProps={{
+            periodFromYM, periodToYM, setPeriodFromYM, setPeriodToYM,
+            compareAuto, setCompareAuto,
+            customCompFromYM, customCompToYM, setCustomCompFromYM, setCustomCompToYM,
+            effectiveCompFromYM, effectiveCompToYM,
+          }}
+        />
         <div className="flex-1 overflow-hidden px-6 py-3 flex justify-center">
           <div
             className="w-full h-full overflow-hidden rounded-xl p-3"
             style={{ maxWidth: 1300, border: `1px solid ${COLORS.border}` }}
           >
-            <PageComponent month={month} />
+            <PageComponent
+              selectedMonths={selectedMonths}
+              compareMonths={compareMonths}
+              periodIsoMonths={periodIsoMonths}
+              compareIsoMonths={compareIsoMonths}
+              periodLabel={formatPeriodLabel(periodFromYM, periodToYM)}
+              compareLabel={formatPeriodLabel(effectiveCompFromYM, effectiveCompToYM)}
+            />
           </div>
         </div>
         <footer className="px-6 py-2 border-t text-[11px] flex justify-between flex-shrink-0" style={{ borderColor: COLORS.border, color: COLORS.muted }}>
