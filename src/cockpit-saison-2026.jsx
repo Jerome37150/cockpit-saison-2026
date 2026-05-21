@@ -78,6 +78,7 @@ const Logo = ({ size = 40 }) => (
 );
 
 const Sidebar = ({ active, setActive, onLogout }) => {
+  const [sourcesOpen, setSourcesOpen] = useState(false);
   const items = [
     { id: 'dashboard', label: "Vue d'ensemble", icon: LayoutDashboard },
     { id: 'portails', label: 'Portails', icon: Building2 },
@@ -123,13 +124,22 @@ const Sidebar = ({ active, setActive, onLogout }) => {
         })}
       </nav>
       <div className="px-6 py-4 border-t text-xs" style={{ borderColor: COLORS.border, color: COLORS.muted }}>
-        <div className="flex items-center gap-2 mb-1">
-          <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: COLORS.primary }} />
-          Sources synchronisées
-        </div>
-        {SYNCED_AT && (
-          <div className="mb-3">Sync : {new Date(SYNCED_AT).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}</div>
-        )}
+        <button
+          type="button"
+          onClick={() => setSourcesOpen(true)}
+          className="w-full text-left rounded-md px-2 py-1.5 mb-3 -mx-2 hover:bg-white/5 transition-colors"
+          title="Voir le détail des sources et leur dernière mise à jour"
+        >
+          <div className="flex items-center gap-2 mb-1">
+            <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: COLORS.primary }} />
+            <span>Sources synchronisées</span>
+          </div>
+          {SYNCED_AT && (
+            <div className="text-[11px]" style={{ color: COLORS.muted }}>
+              Sync : {new Date(SYNCED_AT).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}
+            </div>
+          )}
+        </button>
         {onLogout && (
           <button
             onClick={onLogout}
@@ -142,6 +152,7 @@ const Sidebar = ({ active, setActive, onLogout }) => {
           </button>
         )}
       </div>
+      {sourcesOpen && <SourcesModal onClose={() => setSourcesOpen(false)} />}
     </aside>
   );
 };
@@ -2524,6 +2535,112 @@ const SOURCE_LABELS = {
   piano: 'Piano Analytics',
   gsc: 'Google Search Console',
   secureholiday: 'Secure Holiday',
+};
+
+// État de chaque source : 'ok' (sync nominale) | 'pending' (en attente,
+// pipeline prêt mais data placeholder) | 'error' (sync KO).
+const SOURCE_STATUS = {
+  piano: { state: 'ok', detail: 'Sync API quotidienne' },
+  gsc: { state: 'pending', detail: 'Service account en attente d\'accès aux propriétés' },
+  secureholiday: { state: 'ok', detail: 'Scraping nightly 05:00 UTC' },
+};
+
+const STATUS_COLORS = {
+  ok: { bg: '#22D3CC22', fg: '#22D3CC', label: 'OK' },
+  pending: { bg: '#FBBF2422', fg: '#FBBF24', label: 'En attente' },
+  error: { bg: '#F8717122', fg: '#F87171', label: 'Erreur' },
+};
+
+const SourcesModal = ({ onClose }) => {
+  // Ferme avec Escape
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [onClose]);
+
+  return createPortal(
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center"
+      style={{ background: 'rgba(0,0,0,0.7)' }}
+      onClick={onClose}
+    >
+      <div
+        className="rounded-xl p-5 max-w-lg w-full mx-4"
+        style={{
+          background: COLORS.surface,
+          border: `1px solid ${COLORS.border}`,
+          boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
+        }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h3 style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 700, fontSize: 16 }}>
+              Sources de données
+            </h3>
+            <p className="text-[11px] mt-0.5" style={{ color: COLORS.muted }}>
+              État et dernière mise à jour
+            </p>
+          </div>
+          <button
+            onClick={onClose}
+            className="rounded-md p-1.5 hover:bg-white/5"
+            aria-label="Fermer"
+            style={{ color: COLORS.muted }}
+          >
+            <X size={16} />
+          </button>
+        </div>
+        <div className="space-y-2">
+          {Object.entries(SOURCE_LABELS).map(([key, label]) => {
+            const status = SOURCE_STATUS[key] ?? { state: 'pending', detail: '—' };
+            const cfg = STATUS_COLORS[status.state] ?? STATUS_COLORS.pending;
+            const ts = SYNCED_AT_BY_SOURCE?.[key];
+            return (
+              <div
+                key={key}
+                className="rounded-lg px-3 py-2.5 flex items-center justify-between gap-3"
+                style={{ background: COLORS.surface2, border: `1px solid ${COLORS.border}` }}
+              >
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="text-[10px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded"
+                      style={{ background: cfg.bg, color: cfg.fg, fontFamily: 'JetBrains Mono, monospace' }}
+                    >
+                      {cfg.label}
+                    </span>
+                    <span style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 600, fontSize: 13 }}>
+                      {label}
+                    </span>
+                  </div>
+                  <div className="text-[11px] mt-1" style={{ color: COLORS.muted }}>
+                    {status.detail}
+                  </div>
+                </div>
+                <div
+                  className="text-[11px] text-right flex-shrink-0"
+                  style={{ fontFamily: 'JetBrains Mono, monospace', color: ts ? COLORS.text : COLORS.bad }}
+                >
+                  {ts
+                    ? new Date(ts).toLocaleString('fr-FR', {
+                        day: '2-digit',
+                        month: '2-digit',
+                        year: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                      })
+                    : '— jamais'}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>,
+    document.body,
+  );
 };
 
 const SourcesInfoButton = () => {
