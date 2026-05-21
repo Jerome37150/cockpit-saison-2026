@@ -2442,10 +2442,6 @@ const LoginScreen = ({ onSuccess }) => {
             Se connecter
           </button>
         </form>
-
-        <div className="text-[10px] mt-5 pt-4 border-t text-center" style={{ borderColor: COLORS.border, color: COLORS.muted }}>
-          Accès restreint · Cockpit Marketing
-        </div>
       </div>
     </div>
   );
@@ -2686,17 +2682,6 @@ export default function App() {
             />
           </div>
         </div>
-        <footer className="px-6 py-2 border-t text-[11px] flex justify-between flex-shrink-0" style={{ borderColor: COLORS.border, color: COLORS.muted }}>
-          <span>Sources : Piano Analytics · Secure Holiday · Google Search Console</span>
-          <div className="flex items-center gap-2">
-            {SYNCED_AT && (
-              <span style={{ fontFamily: 'JetBrains Mono, monospace' }}>
-                Dernière sync : {new Date(SYNCED_AT).toLocaleString('fr-FR')}
-              </span>
-            )}
-            <SourcesInfoButton />
-          </div>
-        </footer>
       </main>
     </div>
   );
