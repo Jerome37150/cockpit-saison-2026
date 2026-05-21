@@ -1,4 +1,4 @@
-# Cockpit Saison 2026 — ctoutvert
+# Cockpit Marketing — ctoutvert
 
 Dashboard de pilotage consolidé de la saison 2026.
 

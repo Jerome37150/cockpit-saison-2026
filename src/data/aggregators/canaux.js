@@ -32,3 +32,19 @@ const buildCanaux = () => {
 };
 
 export const CANAUX = buildCanaux();
+
+// -----------------------------------------------------------------------------
+// CANAUX_BY_ISO : { '2026-01-01': { SEO, SEA, DIRECT, ... }, ... }
+// Combine toutes les années Piano dans une clé ISO unique.
+// -----------------------------------------------------------------------------
+
+export const CANAUX_BY_ISO = (() => {
+  const out = {};
+  data.byChannel.forEach((r) => {
+    const k = CANAL_KEY[r.canal];
+    if (!r.mois || !k) return;
+    if (!out[r.mois]) out[r.mois] = {};
+    out[r.mois][k] = (out[r.mois][k] ?? 0) + (r.trafic ?? 0);
+  });
+  return out;
+})();

@@ -15,7 +15,9 @@ import {
 import {
   MONTHS, MONTH_LABELS,
   GLOBAL, GLOBAL_N1, GLOBAL_OBJ,
+  GLOBAL_BY_ISO, GLOBAL_OBJ_BY_ISO,
   PORTAILS, PORTAIL_ORIGINE, CANAUX,
+  PORTAILS_BY_ISO, CANAUX_BY_ISO,
   SEO_PERF, SEO_MARCHES, SEO_PER_PORTAIL,
   SEA_PERF, SEA_PAYS,
   CRM_BASE, CRM_NL, CRM_CAMPAGNES,
@@ -94,7 +96,7 @@ const Sidebar = ({ active, setActive, onLogout }) => {
             ctoutvert
           </div>
           <div className="text-[10px] uppercase tracking-widest" style={{ color: COLORS.primary }}>
-            Cockpit Saison 26
+            Cockpit Marketing
           </div>
         </div>
       </div>
@@ -389,13 +391,15 @@ const axisStyle = {
    ========================================================================= */
 
 // Convertit une liste d'ISO YYYY-MM-01 en noms de mois français (pour
-// rester compatible avec les clés des aggregators GLOBAL[m], PORTAILS[m], etc.).
+// rester compatible avec les clés des aggregators GLOBAL_BY_ISO[m], PORTAILS_BY_ISO[m], etc.).
 const isoToFrenchMonths = (isoMonths) => (isoMonths ?? []).map((iso) => monthOfIso(iso)).filter(Boolean);
 
-// Somme une clé sur les 4 mois — tolère les valeurs null
-const sumMonths = (obj, key) =>
-  M_LIST.reduce((s, m) => {
-    const v = obj?.[m]?.[key];
+// Somme une clé sur les mois passés en paramètre — tolère les valeurs null.
+// Accepte des noms de mois français (= clés des aggregators historiques) OU
+// des ISO YYYY-MM-01 selon la structure du dictionnaire fourni.
+const sumByKeys = (obj, key, keys) =>
+  (keys ?? []).reduce((s, k) => {
+    const v = obj?.[k]?.[key];
     return s + (typeof v === 'number' ? v : 0);
   }, 0) || null;
 
@@ -424,94 +428,104 @@ const PORTAIL_COLORS = {
    ========================================================================= */
 
 // === DASHBOARD ===
-const DashboardPage = ({ selectedMonths = [], compareMonths = [] }) => {
-  const M_LIST = selectedMonths;
-  const month = selectedMonths.length === 1 ? selectedMonths[0] : 'cumul';
-  const isCumul = month === 'cumul';
+const DashboardPage = ({
+  selectedMonths = [],
+  compareMonths = [],
+  periodIsoMonths = [],
+  compareIsoMonths = [],
+  periodLabel,
+  compareLabel,
+}) => {
+  // M_LIST / COMPARE_LIST = listes d'ISO YYYY-MM-01.
+  // Index i de M_LIST ↔ index i de COMPARE_LIST (comparaison appariée).
+  const M_LIST = periodIsoMonths;
+  const COMPARE_LIST = compareIsoMonths;
+  const isCumul = M_LIST.length > 1;
+  const currentIso = M_LIST.length === 1 ? M_LIST[0] : null;
 
   // Filtre portail : null = tous, sinon clé courte (CD, UC, ...).
-  // Toggle au clic sur un portail dans la liste "Portail" en bas.
   const [selectedPortail, setSelectedPortail] = useState(null);
 
-  // Comparaison M-1 : mois précédent dans la saison (null pour janvier ou cumul)
-  const monthIdx = M_LIST.indexOf(month);
-  const prevMonth = monthIdx > 0 ? M_LIST[monthIdx - 1] : null;
-  const prevLabel = prevMonth ? prevMonth.charAt(0).toUpperCase() + prevMonth.slice(1, 4) : null;
+  // Comparaison M-1 : mois précédent dans la période (null si 1er mois ou cumul).
+  const idx = currentIso ? M_LIST.indexOf(currentIso) : -1;
+  const prevIso = idx > 0 ? M_LIST[idx - 1] : null;
+  const prevLabel = prevIso ? (() => {
+    const n = monthOfIso(prevIso);
+    return n ? n.charAt(0).toUpperCase() + n.slice(1, 4) : prevIso;
+  })() : null;
 
-  // Helpers : valeurs filtrées par mois et portail (le cas échéant)
-  const getMonthValue = (m, key) => {
+  // Helpers : valeurs au mois ISO + clé.
+  const getMonthValue = (iso, key) => {
+    if (!iso) return null;
     if (selectedPortail) {
-      // Pour trafic / clickouts : depuis PORTAILS. Les autres clés sont
-      // globales et ne sont pas découpables par portail.
       if (key === 'trafic' || key === 'clickouts') {
-        return PORTAILS[m]?.[selectedPortail]?.[key] ?? null;
+        return PORTAILS_BY_ISO[iso]?.[selectedPortail]?.[key] ?? null;
       }
       return null;
     }
-    return GLOBAL[m]?.[key] ?? null;
-  };
-  const getMonthValueN1 = (m, key) => {
-    if (selectedPortail) {
-      if (key === 'trafic') return PORTAILS[m]?.[selectedPortail]?.n1 ?? null;
-      if (key === 'clickouts') return PORTAILS[m]?.[selectedPortail]?.n1Clickouts ?? null;
-      return null;
-    }
-    return GLOBAL_N1[m]?.[key] ?? null;
+    return GLOBAL_BY_ISO[iso]?.[key] ?? null;
   };
 
   const aggValue = (key) => {
     if (isCumul) {
-      const sum = M_LIST.reduce((s, m) => {
-        const v = getMonthValue(m, key);
+      const sum = M_LIST.reduce((s, iso) => {
+        const v = getMonthValue(iso, key);
         return s + (typeof v === 'number' ? v : 0);
       }, 0);
       return sum || null;
     }
-    return getMonthValue(month, key);
+    return getMonthValue(currentIso, key);
   };
 
-  const m1 = (key) => (prevMonth ? getMonthValue(prevMonth, key) : null);
+  const m1 = (key) => (prevIso ? getMonthValue(prevIso, key) : null);
   const hintM1 = (val) =>
-    prevMonth
+    prevIso
       ? `vs ${fmtFull(val)} en ${prevLabel}`
       : isCumul
-        ? 'cumul Jan→Avril'
+        ? `cumul ${periodLabel}`
         : '—';
 
   const trafic = aggValue('trafic');
   const clickouts = aggValue('clickouts');
-  // Réservations : non disponibles par portail dans Secure Holiday agrégé → null si filtre actif
   const resaDir = aggValue('resaDir');
   const resaApp = aggValue('resaApp');
   const totalResa = aggValue('totalResa');
 
-  // Trends pour les charts (filtrées par portail si actif)
-  const trendsData = M_LIST.map((m) => ({
-    mois: m.charAt(0).toUpperCase() + m.slice(1, 4),
-    trafic2026: getMonthValue(m, 'trafic'),
-    trafic2025: getMonthValueN1(m, 'trafic'),
-    clickouts2026: getMonthValue(m, 'clickouts'),
-    clickouts2025: getMonthValueN1(m, 'clickouts'),
-    // Réservations : toujours globales
-    resaTotal2026: GLOBAL[m]?.totalResa ?? null,
-    resaTotal2025: GLOBAL_N1[m]?.totalResa ?? null,
-  }));
+  // Trends pour les charts : ISO courant + ISO comparé apparié.
+  const trendsData = M_LIST.map((iso, i) => {
+    const compIso = COMPARE_LIST[i] ?? null;
+    const mName = monthOfIso(iso);
+    return {
+      mois: mName ? mName.charAt(0).toUpperCase() + mName.slice(1, 4) : iso,
+      trafic2026: getMonthValue(iso, 'trafic'),
+      trafic2025: getMonthValue(compIso, 'trafic'),
+      clickouts2026: getMonthValue(iso, 'clickouts'),
+      clickouts2025: getMonthValue(compIso, 'clickouts'),
+      resaTotal2026: GLOBAL_BY_ISO[iso]?.totalResa ?? null,
+      resaTotal2025: compIso ? GLOBAL_BY_ISO[compIso]?.totalResa ?? null : null,
+    };
+  });
 
-  // Mix canaux — toujours en cumul Jan→Avril, toujours global
+  // Mix canaux — cumul sur la période courante, toujours global.
   const canalKeys = ['SEO', 'SEA', 'DIRECT', 'REFERRAL', 'SOCIAL', 'IA', 'CRM'];
   const canauxData = canalKeys.map((k) => ({
     name: k,
-    value: M_LIST.reduce((s, m) => s + (CANAUX[m]?.[k] ?? 0), 0),
+    value: M_LIST.reduce((s, iso) => s + (CANAUX_BY_ISO[iso]?.[k] ?? 0), 0),
   }));
 
-  // Liste des portails — toujours en cumul Jan→Avril
-  const portailsData = Object.keys(PORTAILS.janvier || {}).map((p) => ({
+  // Liste des portails — cumul sur la période + comparaison sur COMPARE_LIST.
+  // On parcourt les portails connus dans PORTAILS_BY_ISO (1er mois disponible).
+  const knownPortails = new Set();
+  Object.values(PORTAILS_BY_ISO).forEach((entry) => {
+    Object.keys(entry).forEach((p) => knownPortails.add(p));
+  });
+  const portailsData = Array.from(knownPortails).map((p) => ({
     portail: p,
-    trafic: M_LIST.reduce((s, m) => s + (PORTAILS[m]?.[p]?.trafic ?? 0), 0),
-    n1: M_LIST.reduce((s, m) => s + (PORTAILS[m]?.[p]?.n1 ?? 0), 0),
+    trafic: M_LIST.reduce((s, iso) => s + (PORTAILS_BY_ISO[iso]?.[p]?.trafic ?? 0), 0),
+    n1: COMPARE_LIST.reduce((s, iso) => s + (PORTAILS_BY_ISO[iso]?.[p]?.trafic ?? 0), 0),
   }));
 
-  const monthLabel = isCumul ? 'Cumul Jan→Avril 2026' : `${month.charAt(0).toUpperCase()}${month.slice(1)} 2026`;
+  const monthLabel = periodLabel ?? '—';
 
   return (
     <div className="h-full flex flex-col gap-3">
@@ -563,7 +577,7 @@ const DashboardPage = ({ selectedMonths = [], compareMonths = [] }) => {
       </section>
 
       <div className="text-[10px] uppercase tracking-widest font-semibold flex-shrink-0" style={{ color: COLORS.muted }}>
-        Vue saison · Cumul Janvier → Avril 2026
+        Vue période · {periodLabel ?? '—'}{compareLabel ? ` · vs ${compareLabel}` : ''}
         {selectedPortail && <span style={{ color: '#FB923C', marginLeft: 8 }}>· trafic & clickouts filtrés sur {PORTAIL_LABELS[selectedPortail]}</span>}
       </div>
 
@@ -681,36 +695,56 @@ const DashboardPage = ({ selectedMonths = [], compareMonths = [] }) => {
 };
 
 // === PORTAILS ===
-const PortailsPage = ({ selectedMonths = [], compareMonths = [] }) => {
-  const M_LIST = selectedMonths;
-  const month = selectedMonths.length === 1 ? selectedMonths[0] : 'cumul';
-  const isCumul = month === 'cumul';
-  const monthIdx = M_LIST.indexOf(month);
-  const prevMonth = monthIdx > 0 ? M_LIST[monthIdx - 1] : null;
-  const prevLabel = prevMonth ? prevMonth.charAt(0).toUpperCase() + prevMonth.slice(1, 4) : null;
-  const monthLabel = isCumul ? 'Cumul Jan→Avril 2026' : `${month.charAt(0).toUpperCase()}${month.slice(1)} 2026`;
+const PortailsPage = ({
+  selectedMonths = [],
+  compareMonths = [],
+  periodIsoMonths = [],
+  compareIsoMonths = [],
+  periodLabel,
+  compareLabel,
+}) => {
+  const M_LIST = periodIsoMonths;
+  const COMPARE_LIST = compareIsoMonths;
+  const isCumul = M_LIST.length > 1;
+  const currentIso = M_LIST.length === 1 ? M_LIST[0] : null;
+  const idx = currentIso ? M_LIST.indexOf(currentIso) : -1;
+  const prevIso = idx > 0 ? M_LIST[idx - 1] : null;
+  const prevLabel = prevIso ? (() => {
+    const n = monthOfIso(prevIso);
+    return n ? n.charAt(0).toUpperCase() + n.slice(1, 4) : prevIso;
+  })() : null;
+  const monthLabel = periodLabel ?? '—';
 
-  // Bloc filtrable : valeurs du mois + comparaison M-1
-  const portailKeys = Object.keys(PORTAILS.janvier || {});
+  // Liste des portails connus (union des entrées de PORTAILS_BY_ISO).
+  const portailKeys = (() => {
+    const set = new Set();
+    Object.values(PORTAILS_BY_ISO).forEach((entry) => {
+      Object.keys(entry).forEach((p) => set.add(p));
+    });
+    return Array.from(set);
+  })();
+
+  // Bloc filtrable : valeurs sur la période + comparaison M-1 (mois précédent dans la période).
   const filteredCards = portailKeys.map((p) => {
     const trafic = isCumul
-      ? M_LIST.reduce((s, m) => s + (PORTAILS[m]?.[p]?.trafic ?? 0), 0)
-      : PORTAILS[month]?.[p]?.trafic ?? null;
-    const traficM1 = prevMonth ? PORTAILS[prevMonth]?.[p]?.trafic ?? null : null;
+      ? M_LIST.reduce((s, iso) => s + (PORTAILS_BY_ISO[iso]?.[p]?.trafic ?? 0), 0)
+      : PORTAILS_BY_ISO[currentIso]?.[p]?.trafic ?? null;
+    const traficM1 = prevIso ? PORTAILS_BY_ISO[prevIso]?.[p]?.trafic ?? null : null;
     return { portail: p, trafic, traficM1 };
   });
 
-  // Données cumul (toujours Jan→Avril, indépendant du sélecteur)
+  // Cumul période vs comparaison.
   const cumulData = portailKeys.map((p) => ({
     portail: p,
-    trafic: M_LIST.reduce((s, m) => s + (PORTAILS[m]?.[p]?.trafic ?? 0), 0),
-    n1: M_LIST.reduce((s, m) => s + (PORTAILS[m]?.[p]?.n1 ?? 0), 0),
+    trafic: M_LIST.reduce((s, iso) => s + (PORTAILS_BY_ISO[iso]?.[p]?.trafic ?? 0), 0),
+    n1: COMPARE_LIST.reduce((s, iso) => s + (PORTAILS_BY_ISO[iso]?.[p]?.trafic ?? 0), 0),
   }));
 
-  const portailMonthly = M_LIST.map((m) => {
-    const obj = { mois: m.charAt(0).toUpperCase() + m.slice(1, 4) };
+  const portailMonthly = M_LIST.map((iso) => {
+    const mName = monthOfIso(iso);
+    const obj = { mois: mName ? mName.charAt(0).toUpperCase() + mName.slice(1, 4) : iso };
     portailKeys.forEach((p) => {
-      obj[PORTAIL_LABELS[p]] = PORTAILS[m]?.[p]?.trafic ?? null;
+      obj[PORTAIL_LABELS[p]] = PORTAILS_BY_ISO[iso]?.[p]?.trafic ?? null;
     });
     return obj;
   });
@@ -760,7 +794,7 @@ const PortailsPage = ({ selectedMonths = [], compareMonths = [] }) => {
                   </div>
                 )}
                 <div className="text-[9px] mt-0.5" style={{ color: COLORS.muted }}>
-                  {prevMonth ? `vs ${fmt(p.traficM1)} en ${prevLabel}` : isCumul ? 'cumul' : '—'}
+                  {prevIso ? `vs ${fmt(p.traficM1)} en ${prevLabel}` : isCumul ? 'cumul' : '—'}
                 </div>
               </Card>
             );
@@ -1003,23 +1037,33 @@ const SEOPortailModal = ({ portail, onClose }) => {
 };
 
 // === SEA ===
-const SEAPage = ({ selectedMonths = [], compareMonths = [] }) => {
-  const M_LIST = selectedMonths;
-  const month = selectedMonths.length === 1 ? selectedMonths[0] : 'cumul';
-  const isCumul = month === 'cumul';
-  const monthIdx = M_LIST.indexOf(month);
-  const prevMonth = monthIdx > 0 ? M_LIST[monthIdx - 1] : null;
-  const prevLabel = prevMonth ? prevMonth.charAt(0).toUpperCase() + prevMonth.slice(1, 4) : null;
-  const monthLabel = isCumul ? 'Cumul Jan→Avril 2026' : `${month.charAt(0).toUpperCase()}${month.slice(1)} 2026`;
+const SEAPage = ({
+  selectedMonths = [],
+  compareMonths = [],
+  periodIsoMonths = [],
+  compareIsoMonths = [],
+  periodLabel,
+}) => {
+  // Note : SEA_PERF reste keyé par nom de mois français pour l'instant
+  // (aggregator pas encore refactoré en *_BY_ISO). On itère donc sur les
+  // noms français dérivés de la période, mais cela ne supporte pas le
+  // cross-année dans SEA — TODO.
+  const M_NAMES = selectedMonths;
+  const isCumul = M_NAMES.length > 1;
+  const currentName = M_NAMES.length === 1 ? M_NAMES[0] : null;
+  const idx = currentName ? M_NAMES.indexOf(currentName) : -1;
+  const prevName = idx > 0 ? M_NAMES[idx - 1] : null;
+  const prevLabel = prevName ? prevName.charAt(0).toUpperCase() + prevName.slice(1, 4) : null;
+  const monthLabel = periodLabel ?? '—';
 
-  // Bloc filtrable : valeurs du mois sélectionné + comparaison M-1
-  const get = (key) => (isCumul ? sumMonths(SEA_PERF, key) : SEA_PERF[month]?.[key] ?? null);
-  const m1 = (key) => (prevMonth ? SEA_PERF[prevMonth]?.[key] ?? null : null);
+  // Bloc filtrable : valeurs sur la période + comparaison M-1
+  const get = (key) => (isCumul ? sumByKeys(SEA_PERF, key, M_NAMES) : SEA_PERF[currentName]?.[key] ?? null);
+  const m1 = (key) => (prevName ? SEA_PERF[prevName]?.[key] ?? null : null);
   const hintM1 = (val, suffix = '') =>
-    prevMonth
+    prevName
       ? `vs ${suffix === '€' ? fmtEuro(val) : fmtFull(val)} en ${prevLabel}`
       : isCumul
-        ? 'cumul Jan→Avril'
+        ? `cumul ${periodLabel}`
         : '—';
 
   const trafic = get('trafic');
@@ -1597,8 +1641,8 @@ const PerformancePage = ({ selectedMonths = [] }) => {
   const budgetMensuelMoyen = budgetTotal / 6; // cumul = 6 mois (Oct→Mars)
 
   // CA & réservations Jan→Avr 2026
-  const caYTD = M_LIST.reduce((s, m) => s + (GLOBAL[m]?.ca ?? 0), 0);
-  const resaYTD = M_LIST.reduce((s, m) => s + (GLOBAL[m]?.totalResa ?? 0), 0);
+  const caYTD = M_LIST.reduce((s, m) => s + (GLOBAL_BY_ISO[m]?.ca ?? 0), 0);
+  const resaYTD = M_LIST.reduce((s, m) => s + (GLOBAL_BY_ISO[m]?.totalResa ?? 0), 0);
   const roiYTD = budgetTotal ? caYTD / budgetTotal : null;
   const cpa = resaYTD ? budgetTotal / resaYTD : null; // coût d'acquisition / résa
   const ticketMoyen = resaYTD ? caYTD / resaYTD : null;
@@ -1611,9 +1655,9 @@ const PerformancePage = ({ selectedMonths = [] }) => {
   // Évolution mensuelle du ROI
   const roiMensuel = M_LIST.map((m) => ({
     mois: m.charAt(0).toUpperCase() + m.slice(1, 4),
-    ca: GLOBAL[m]?.ca ?? 0,
+    ca: GLOBAL_BY_ISO[m]?.ca ?? 0,
     budget: budgetMensuelMoyen,
-    roi: GLOBAL[m]?.ca ? GLOBAL[m].ca / budgetMensuelMoyen : 0,
+    roi: GLOBAL_BY_ISO[m]?.ca ? GLOBAL_BY_ISO[m].ca / budgetMensuelMoyen : 0,
   }));
 
   // Allocation par levier (basée sur la part de trafic Jan→Mars puisque
@@ -1622,13 +1666,13 @@ const PerformancePage = ({ selectedMonths = [] }) => {
   const traficByCanal = {};
   Object.values(LEVIER_TO_CANAL).forEach((k) => {
     traficByCanal[k] = moisAttribution.reduce(
-      (s, m) => s + (CANAUX[m]?.[k] ?? 0),
+      (s, m) => s + (CANAUX_BY_ISO[m]?.[k] ?? 0),
       0,
     );
   });
   const traficCanalTotal = Object.values(traficByCanal).reduce((s, v) => s + v, 0) || 1;
-  const caJanMar = moisAttribution.reduce((s, m) => s + (GLOBAL[m]?.ca ?? 0), 0);
-  const resaJanMar = moisAttribution.reduce((s, m) => s + (GLOBAL[m]?.totalResa ?? 0), 0);
+  const caJanMar = moisAttribution.reduce((s, m) => s + (GLOBAL_BY_ISO[m]?.ca ?? 0), 0);
+  const resaJanMar = moisAttribution.reduce((s, m) => s + (GLOBAL_BY_ISO[m]?.totalResa ?? 0), 0);
 
   const leviersPerf = BUDGET_LEVIERS.map((l) => {
     const canal = LEVIER_TO_CANAL[l.levier];
@@ -1790,23 +1834,23 @@ const PerformancePage = ({ selectedMonths = [] }) => {
 const buildAnalyseIA = (selectedMonths = []) => {
   const M_LIST = selectedMonths;
   // ─── Métriques agrégées ────────────────────────────────────────────────
-  const traficYTD = M_LIST.reduce((s, m) => s + (GLOBAL[m]?.trafic ?? 0), 0);
+  const traficYTD = M_LIST.reduce((s, m) => s + (GLOBAL_BY_ISO[m]?.trafic ?? 0), 0);
   const traficN1YTD = M_LIST.reduce((s, m) => s + (GLOBAL_N1[m]?.trafic ?? 0), 0);
   const traficEvo = traficN1YTD ? (traficYTD - traficN1YTD) / traficN1YTD : null;
 
-  const clickoutsYTD = M_LIST.reduce((s, m) => s + (GLOBAL[m]?.clickouts ?? 0), 0);
+  const clickoutsYTD = M_LIST.reduce((s, m) => s + (GLOBAL_BY_ISO[m]?.clickouts ?? 0), 0);
   const clickoutsN1YTD = M_LIST.reduce((s, m) => s + (GLOBAL_N1[m]?.clickouts ?? 0), 0);
   const clickoutsEvo = clickoutsN1YTD ? (clickoutsYTD - clickoutsN1YTD) / clickoutsN1YTD : null;
 
-  const resaDirYTD = M_LIST.reduce((s, m) => s + (GLOBAL[m]?.resaDir ?? 0), 0);
+  const resaDirYTD = M_LIST.reduce((s, m) => s + (GLOBAL_BY_ISO[m]?.resaDir ?? 0), 0);
   const resaDirN1YTD = M_LIST.reduce((s, m) => s + (GLOBAL_N1[m]?.resaDir ?? 0), 0);
   const resaDirEvo = resaDirN1YTD ? (resaDirYTD - resaDirN1YTD) / resaDirN1YTD : null;
 
-  const resaTotalYTD = M_LIST.reduce((s, m) => s + (GLOBAL[m]?.totalResa ?? 0), 0);
+  const resaTotalYTD = M_LIST.reduce((s, m) => s + (GLOBAL_BY_ISO[m]?.totalResa ?? 0), 0);
   const resaTotalN1YTD = M_LIST.reduce((s, m) => s + (GLOBAL_N1[m]?.totalResa ?? 0), 0);
   const resaEvo = resaTotalN1YTD ? (resaTotalYTD - resaTotalN1YTD) / resaTotalN1YTD : null;
 
-  const caYTD = M_LIST.reduce((s, m) => s + (GLOBAL[m]?.ca ?? 0), 0);
+  const caYTD = M_LIST.reduce((s, m) => s + (GLOBAL_BY_ISO[m]?.ca ?? 0), 0);
   const budgetTotal = BUDGET_LEVIERS.reduce((s, l) => s + (l.budget ?? 0), 0);
   const roiYTD = budgetTotal ? caYTD / budgetTotal : null;
 
@@ -1827,8 +1871,8 @@ const buildAnalyseIA = (selectedMonths = []) => {
 
   // Portails — trouver les meilleurs et les pires en évolution
   const portailsCumul = Object.keys(PORTAILS.janvier || {}).map((p) => {
-    const trafic = M_LIST.reduce((s, m) => s + (PORTAILS[m]?.[p]?.trafic ?? 0), 0);
-    const n1 = M_LIST.reduce((s, m) => s + (PORTAILS[m]?.[p]?.n1 ?? 0), 0);
+    const trafic = M_LIST.reduce((s, m) => s + (PORTAILS_BY_ISO[m]?.[p]?.trafic ?? 0), 0);
+    const n1 = M_LIST.reduce((s, m) => s + (PORTAILS_BY_ISO[m]?.[p]?.n1 ?? 0), 0);
     return { portail: p, trafic, n1, evo: n1 ? (trafic - n1) / n1 : null };
   });
   const portailsTriParEvo = [...portailsCumul]
@@ -2360,7 +2404,7 @@ const LoginScreen = ({ onSuccess }) => {
               ctoutvert
             </div>
             <div className="text-[10px] uppercase tracking-widest" style={{ color: COLORS.primary }}>
-              Cockpit Saison 26
+              Cockpit Marketing
             </div>
           </div>
         </div>
@@ -2400,7 +2444,7 @@ const LoginScreen = ({ onSuccess }) => {
         </form>
 
         <div className="text-[10px] mt-5 pt-4 border-t text-center" style={{ borderColor: COLORS.border, color: COLORS.muted }}>
-          Accès restreint · Cockpit saison 2026
+          Accès restreint · Cockpit Marketing
         </div>
       </div>
     </div>
@@ -2602,7 +2646,7 @@ export default function App() {
   };
 
   const PAGES = {
-    dashboard: { title: "Vue d'ensemble", subtitle: 'Saison 2026 — pilotage consolidé', component: DashboardPage },
+    dashboard: { title: "Vue d'ensemble", subtitle: 'Pilotage consolidé — ctoutvert', component: DashboardPage },
     portails: { title: 'Portails', subtitle: 'Performance trafic par site', component: PortailsPage },
     sea: { title: 'SEA', subtitle: 'Acquisition payante par marché', component: SEAPage },
     crm: { title: 'CRM', subtitle: 'Base abonnés et email marketing', component: CRMPage },

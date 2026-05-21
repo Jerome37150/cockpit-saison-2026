@@ -11,7 +11,7 @@
 
 import piano from '../sources/piano.json';
 import secureholiday from '../sources/secureholiday.json';
-import { ACTIVE_MONTHS } from '../shared/constants.js';
+import { ACTIVE_MONTHS, COCKPIT_YEAR } from '../shared/constants.js';
 import { sumByMonth, safeDiv, sumDirAndApp } from '../shared/helpers.js';
 import { pianoSchema, secureholidaySchema, validate } from '../shared/schemas.js';
 
@@ -79,3 +79,33 @@ const buildGlobalObj = () => {
 };
 
 export const GLOBAL_OBJ = buildGlobalObj();
+
+// -----------------------------------------------------------------------------
+// GLOBAL_BY_ISO : même payload mais keyé par ISO YYYY-MM-01 (combine 2026 + 2025).
+// Permet aux pages d'itérer sur periodIsoMonths/compareIsoMonths quelle que soit
+// l'année (donc cross-année sans bug).
+// -----------------------------------------------------------------------------
+
+const MONTH_NUM = Object.fromEntries(ACTIVE_MONTHS.map((m, i) => [m, String(i + 1).padStart(2, '0')]));
+
+export const GLOBAL_BY_ISO = (() => {
+  const out = {};
+  ACTIVE_MONTHS.forEach((m) => {
+    const num = MONTH_NUM[m];
+    if (!num) return;
+    out[`${COCKPIT_YEAR}-${num}-01`] = GLOBAL[m];
+    out[`${COCKPIT_YEAR - 1}-${num}-01`] = GLOBAL_N1[m];
+  });
+  return out;
+})();
+
+export const GLOBAL_OBJ_BY_ISO = (() => {
+  const out = {};
+  ACTIVE_MONTHS.forEach((m) => {
+    const num = MONTH_NUM[m];
+    if (!num) return;
+    // Objectif n'a pas de N-1, on l'expose juste pour l'année courante.
+    out[`${COCKPIT_YEAR}-${num}-01`] = GLOBAL_OBJ[m];
+  });
+  return out;
+})();

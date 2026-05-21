@@ -40,6 +40,26 @@ const buildPortails = () => {
 
 export const PORTAILS = buildPortails();
 
+// -----------------------------------------------------------------------------
+// PORTAILS_BY_ISO : { '2026-01-01': { CD: {trafic, clickouts}, ... }, ... }
+// Versioning par ISO month qui combine toutes les années dispo dans Piano
+// (donc plus de distinction Réel/N-1 — l'année est dans la clé ISO).
+// Permet aux pages d'itérer sur periodIsoMonths / compareIsoMonths.
+// -----------------------------------------------------------------------------
+
+export const PORTAILS_BY_ISO = (() => {
+  const out = {};
+  data.perPortail.forEach((r) => {
+    if (!r.mois || !PORTAIL_CODES.includes(r.portail)) return;
+    if (!out[r.mois]) out[r.mois] = {};
+    out[r.mois][r.portail] = {
+      trafic: r.trafic ?? null,
+      clickouts: r.clickouts ?? null,
+    };
+  });
+  return out;
+})();
+
 // Origine de la donnée pour chaque portail (Réel par défaut, Fictif si une
 // row trafic du portail a Origine = "Fictif").
 export const PORTAIL_ORIGINE = (() => {
