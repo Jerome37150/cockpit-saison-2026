@@ -2531,24 +2531,30 @@ const DataPending = ({ source, reason }) => (
    SOURCES INFO BUTTON (bouton "i" + popover détail par source)
    ========================================================================= */
 
-const SOURCE_LABELS = {
-  piano: 'Piano Analytics',
-  gsc: 'Google Search Console',
-  secureholiday: 'Secure Holiday',
-};
-
-// État de chaque source : 'ok' (sync nominale) | 'pending' (en attente,
-// pipeline prêt mais data placeholder) | 'error' (sync KO).
-const SOURCE_STATUS = {
-  piano: { state: 'ok', detail: 'Sync API quotidienne' },
-  gsc: { state: 'pending', detail: 'Service account en attente d\'accès aux propriétés' },
-  secureholiday: { state: 'ok', detail: 'Scraping nightly 05:00 UTC' },
-};
+// Liste exhaustive des sources visées par le cockpit, dans l'ordre d'affichage
+// dans la modale. Chaque entrée :
+//   - label        : nom affiché
+//   - state        : 'ok' (sync nominale) | 'pending' (pipeline OK mais pas
+//                    encore de data réelle, ex. en attente d'accès) | 'missing'
+//                    (rien de connecté, à brancher)
+//   - detail       : courte explication du statut
+//   - syncedAtKey  : clé dans SYNCED_AT_BY_SOURCE (null si pas encore branché)
+const SOURCES = [
+  { label: 'Piano Analytics',              state: 'ok',      detail: 'Sync API quotidienne',                              syncedAtKey: 'piano' },
+  { label: 'Google Ads',                   state: 'missing', detail: 'À connecter via l\'API Google Ads',                  syncedAtKey: null },
+  { label: 'Google Search Console',        state: 'pending', detail: 'Service account en attente d\'accès aux propriétés', syncedAtKey: 'gsc' },
+  { label: 'Monitoring Traffic',           state: 'ok',      detail: 'Pack Trafic — scraping nightly 05:00 UTC',           syncedAtKey: 'secureholiday' },
+  { label: 'Monitoring Traffic Acquéreur', state: 'ok',      detail: 'Pack Trafic Apporteurs — scraping nightly 05:00 UTC', syncedAtKey: 'secureholiday' },
+  { label: 'Monitoring Clic Out',          state: 'ok',      detail: 'Stats Clicks — scraping nightly 05:00 UTC',          syncedAtKey: 'secureholiday' },
+  { label: 'CRM data',                     state: 'missing', detail: 'À connecter (Brevo, Mailchimp, ou équivalent)',      syncedAtKey: null },
+  { label: 'Budget Marketing',             state: 'missing', detail: 'À connecter (export finance par levier)',            syncedAtKey: null },
+  { label: 'Budget Client',                state: 'missing', detail: 'À connecter (export commercial CTV)',                syncedAtKey: null },
+];
 
 const STATUS_COLORS = {
-  ok: { bg: '#22D3CC22', fg: '#22D3CC', label: 'OK' },
+  ok:      { bg: '#22D3CC22', fg: '#22D3CC', label: 'OK' },
   pending: { bg: '#FBBF2422', fg: '#FBBF24', label: 'En attente' },
-  error: { bg: '#F8717122', fg: '#F87171', label: 'Erreur' },
+  missing: { bg: '#F8717122', fg: '#F87171', label: 'Non connectée' },
 };
 
 const SourcesModal = ({ onClose }) => {
@@ -2592,36 +2598,35 @@ const SourcesModal = ({ onClose }) => {
             <X size={16} />
           </button>
         </div>
-        <div className="space-y-2">
-          {Object.entries(SOURCE_LABELS).map(([key, label]) => {
-            const status = SOURCE_STATUS[key] ?? { state: 'pending', detail: '—' };
-            const cfg = STATUS_COLORS[status.state] ?? STATUS_COLORS.pending;
-            const ts = SYNCED_AT_BY_SOURCE?.[key];
+        <div className="space-y-2 max-h-[60vh] overflow-y-auto pr-1">
+          {SOURCES.map((src) => {
+            const cfg = STATUS_COLORS[src.state] ?? STATUS_COLORS.missing;
+            const ts = src.syncedAtKey ? SYNCED_AT_BY_SOURCE?.[src.syncedAtKey] : null;
             return (
               <div
-                key={key}
+                key={src.label}
                 className="rounded-lg px-3 py-2.5 flex items-center justify-between gap-3"
                 style={{ background: COLORS.surface2, border: `1px solid ${COLORS.border}` }}
               >
                 <div className="min-w-0 flex-1">
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 flex-wrap">
                     <span
-                      className="text-[10px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded"
+                      className="text-[10px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded flex-shrink-0"
                       style={{ background: cfg.bg, color: cfg.fg, fontFamily: 'JetBrains Mono, monospace' }}
                     >
                       {cfg.label}
                     </span>
                     <span style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 600, fontSize: 13 }}>
-                      {label}
+                      {src.label}
                     </span>
                   </div>
                   <div className="text-[11px] mt-1" style={{ color: COLORS.muted }}>
-                    {status.detail}
+                    {src.detail}
                   </div>
                 </div>
                 <div
                   className="text-[11px] text-right flex-shrink-0"
-                  style={{ fontFamily: 'JetBrains Mono, monospace', color: ts ? COLORS.text : COLORS.bad }}
+                  style={{ fontFamily: 'JetBrains Mono, monospace', color: ts ? COLORS.text : COLORS.muted }}
                 >
                   {ts
                     ? new Date(ts).toLocaleString('fr-FR', {
@@ -2631,7 +2636,7 @@ const SourcesModal = ({ onClose }) => {
                         hour: '2-digit',
                         minute: '2-digit',
                       })
-                    : '— jamais'}
+                    : '—'}
                 </div>
               </div>
             );
