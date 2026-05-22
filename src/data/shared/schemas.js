@@ -67,8 +67,10 @@ export const pianoSchema = z.object({
 
 export const gscSchema = z.object({
   ...meta,
-  perMarket: z.array(z.object({
+  // 1 ligne par (marché × portail). SEO_MARCHES agrège en sommant par marché.
+  perMarketPerPortail: z.array(z.object({
     marche: z.string(),
+    portail: z.string(),
     snapshotDate: isoMois,
     kw: optionalNumber,
     volumeRech: optionalNumber, // ⚠️ pas dispo via GSC nativement

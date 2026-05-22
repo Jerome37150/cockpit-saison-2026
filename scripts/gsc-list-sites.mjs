@@ -2,8 +2,12 @@
 /**
  * gsc-list-sites.mjs
  * ----------------------------------------------------------------------------
- * Liste les propriétés Google Search Console accessibles au service account
- * configuré dans .env (GSC_SERVICE_ACCOUNT_JSON).
+ * Liste les propriétés Google Search Console accessibles via OAuth utilisateur.
+ *
+ * Pré-requis dans .env :
+ *   GSC_OAUTH_CLIENT_ID
+ *   GSC_OAUTH_CLIENT_SECRET
+ *   GSC_OAUTH_REFRESH_TOKEN  (obtenu via `node scripts/gsc-oauth.mjs`)
  *
  * Sert UNIQUEMENT à :
  *   1. Valider que l'auth fonctionne.
@@ -14,32 +18,25 @@
  * ============================================================================
  */
 
-import { readFile } from 'node:fs/promises';
-import { fileURLToPath } from 'node:url';
-import { dirname, resolve, isAbsolute } from 'node:path';
 import { config as loadEnv } from 'dotenv';
 import { google } from 'googleapis';
 
 loadEnv();
 
-const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const { GSC_SERVICE_ACCOUNT_JSON } = process.env;
+const {
+  GSC_OAUTH_CLIENT_ID,
+  GSC_OAUTH_CLIENT_SECRET,
+  GSC_OAUTH_REFRESH_TOKEN,
+} = process.env;
 
-if (!GSC_SERVICE_ACCOUNT_JSON) {
-  console.error('[gsc-list] ERREUR : GSC_SERVICE_ACCOUNT_JSON absent du .env');
+if (!GSC_OAUTH_CLIENT_ID || !GSC_OAUTH_CLIENT_SECRET || !GSC_OAUTH_REFRESH_TOKEN) {
+  console.error('[gsc-list] ERREUR : creds OAuth GSC manquantes dans .env');
+  console.error('  → Lance d\'abord : node scripts/gsc-oauth.mjs');
   process.exit(1);
 }
 
-const keyPath = isAbsolute(GSC_SERVICE_ACCOUNT_JSON)
-  ? GSC_SERVICE_ACCOUNT_JSON
-  : resolve(ROOT, GSC_SERVICE_ACCOUNT_JSON);
-
-const credentials = JSON.parse(await readFile(keyPath, 'utf8'));
-
-const auth = new google.auth.GoogleAuth({
-  credentials,
-  scopes: ['https://www.googleapis.com/auth/webmasters.readonly'],
-});
+const auth = new google.auth.OAuth2(GSC_OAUTH_CLIENT_ID, GSC_OAUTH_CLIENT_SECRET);
+auth.setCredentials({ refresh_token: GSC_OAUTH_REFRESH_TOKEN });
 
 const searchconsole = google.searchconsole({ version: 'v1', auth });
 
@@ -47,9 +44,7 @@ const { data } = await searchconsole.sites.list();
 const sites = data.siteEntry ?? [];
 
 if (sites.length === 0) {
-  console.log('[gsc-list] Aucune propriété accessible.');
-  console.log('  → Vérifie que kpi-ctv@ctv-kpi.iam.gserviceaccount.com est bien');
-  console.log('    ajouté comme utilisateur (Restreint suffit) sur les propriétés GSC.');
+  console.log('[gsc-list] Aucune propriété accessible avec ce compte.');
   process.exit(0);
 }
 

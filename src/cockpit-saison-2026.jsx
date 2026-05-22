@@ -18,7 +18,7 @@ import {
   GLOBAL_BY_ISO, GLOBAL_OBJ_BY_ISO,
   PORTAILS, PORTAIL_ORIGINE, CANAUX,
   PORTAILS_BY_ISO, CANAUX_BY_ISO,
-  SEO_PERF, SEO_MARCHES, SEO_PER_PORTAIL,
+  SEO_PERF, SEO_MARCHES, SEO_MARCHES_PER_PORTAIL, SEO_PER_PORTAIL,
   SEA_PERF, SEA_PAYS,
   CRM_BASE, CRM_NL, CRM_CAMPAGNES,
   SEA_CAMPAGNES, SEA_TYPE_COLORS,
@@ -82,6 +82,7 @@ const Sidebar = ({ active, setActive, onLogout }) => {
   const items = [
     { id: 'dashboard', label: "Vue d'ensemble", icon: LayoutDashboard },
     { id: 'portails', label: 'Portails', icon: Building2 },
+    { id: 'seo', label: 'SEO', icon: Search },
     { id: 'sea', label: 'SEA', icon: Target },
     { id: 'crm', label: 'CRM', icon: Mail },
     { id: 'clients', label: 'Clients', icon: Users },
@@ -1044,6 +1045,165 @@ const SEOPortailModal = ({ portail, onClose }) => {
         </table>
       </Card>
     </Modal>
+  );
+};
+
+// === SEO ===
+// Analyse positions par marché × portail (source : Google Search Console).
+// SEO_MARCHES = agrégé par marché ; SEO_MARCHES_PER_PORTAIL = granularité brute.
+const SEOPage = () => {
+  const totalKw = SEO_MARCHES.reduce((s, m) => s + (m.kw ?? 0), 0);
+  const totalTop3 = SEO_MARCHES.reduce((s, m) => s + (m.top3 ?? 0), 0);
+  const totalTop4_10 = SEO_MARCHES.reduce((s, m) => s + (m.top4_10 ?? 0), 0);
+  const pctP1 = totalKw ? (totalTop3 + totalTop4_10) / totalKw : null;
+  const sitesActifs = SEO_MARCHES_PER_PORTAIL.filter((r) => (r.kw ?? 0) > 0).length;
+  const sitesTotal = SEO_MARCHES_PER_PORTAIL.length;
+
+  const BUCKETS = [
+    { key: 'Top3',       color: COLORS.good },
+    { key: 'Top 4-10',   color: COLORS.primary },
+    { key: 'Page 2',     color: COLORS.warn },
+    { key: 'Non classé', color: COLORS.muted },
+  ];
+
+  const stackData = SEO_MARCHES.map((m) => ({
+    marche: m.marche,
+    Top3: m.top3 ?? 0,
+    'Top 4-10': m.top4_10 ?? 0,
+    'Page 2': m.page2 ?? 0,
+    'Non classé': m.nonClasse ?? 0,
+  }));
+
+  return (
+    <div className="h-full flex flex-col gap-3 overflow-hidden">
+      {/* KPIs globaux */}
+      <div className="grid grid-cols-4 gap-2 flex-shrink-0">
+        <KPI label="Mots-clés trackés" value={fmtFull(totalKw)} hint={`${SEO_MARCHES.length} marchés · ${sitesActifs}/${sitesTotal} sites`} tone="primary" />
+        <KPI label="Top 3 cumulé" value={fmtFull(totalTop3)} hint={`${fmtPct(totalKw ? totalTop3 / totalKw : null, 1)} des mots-clés`} />
+        <KPI label="% Page 1 global" value={fmtPct(pctP1, 1)} hint="(Top 3 + Top 4-10) / total" tone="primary" />
+        <KPI label="Sites GSC actifs" value={`${sitesActifs}/${sitesTotal}`} hint="portails avec données" />
+      </div>
+
+      {/* Distribution par marché + tableau marché */}
+      <div className="grid grid-cols-2 gap-3 flex-shrink-0" style={{ height: 260 }}>
+        <ChartContainer
+          title="Positions par marché"
+          subtitle="Mots-clés bucketisés · 30 derniers jours"
+        >
+          <BarChart layout="vertical" data={stackData} margin={{ left: 0, right: 8, top: 4, bottom: 28 }}>
+            <CartesianGrid stroke={COLORS.border} strokeDasharray="3 3" horizontal={false} />
+            <XAxis type="number" {...axisStyle} tickFormatter={fmt} />
+            <YAxis type="category" dataKey="marche" {...axisStyle} width={32} />
+            <Tooltip {...tooltipStyle} formatter={(v) => fmtFull(v)} />
+            {BUCKETS.map((b) => (
+              <Bar key={b.key} dataKey={b.key} stackId="pos" fill={b.color} />
+            ))}
+          </BarChart>
+        </ChartContainer>
+
+        <Card className="flex flex-col">
+          <div className="text-sm font-semibold mb-2 flex-shrink-0" style={{ fontFamily: 'Manrope, sans-serif' }}>
+            Agrégé par marché
+            <span className="text-[10px] font-normal ml-2" style={{ color: COLORS.muted }}>
+              · somme tous portails
+            </span>
+          </div>
+          <div className="flex-1 min-h-0 overflow-y-auto">
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="text-[10px] uppercase tracking-wider" style={{ color: COLORS.muted, borderBottom: `1px solid ${COLORS.border}` }}>
+                  <th className="text-left py-1.5">Marché</th>
+                  <th className="text-right py-1.5">Mots-clés</th>
+                  <th className="text-right py-1.5">Top 3</th>
+                  <th className="text-right py-1.5">% Page 1</th>
+                </tr>
+              </thead>
+              <tbody style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+                {SEO_MARCHES.map((m) => {
+                  const pctP1Row = m.kw ? (m.top3 + m.top4_10) / m.kw : null;
+                  return (
+                    <tr key={m.marche} style={{ borderBottom: `1px solid ${COLORS.border}` }}>
+                      <td className="py-1.5" style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 600 }}>{m.marche}</td>
+                      <td className="text-right py-1.5">{fmtFull(m.kw)}</td>
+                      <td className="text-right py-1.5" style={{ color: COLORS.good }}>{fmtFull(m.top3)}</td>
+                      <td className="text-right py-1.5" style={{ color: pctP1Row == null ? COLORS.muted : pctP1Row >= 0.5 ? COLORS.good : pctP1Row >= 0.3 ? COLORS.warn : COLORS.bad }}>
+                        {fmtPct(pctP1Row, 0)}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </Card>
+      </div>
+
+      {/* Légende des buckets */}
+      <div className="flex items-center gap-4 text-[10px] flex-shrink-0" style={{ color: COLORS.muted }}>
+        {BUCKETS.map((b) => (
+          <span key={b.key} className="inline-flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-sm" style={{ background: b.color }} />
+            {b.key}
+          </span>
+        ))}
+        <span className="ml-auto">MC (MyCamping) absent de GSC — exclu volontairement</span>
+      </div>
+
+      {/* Tableau détaillé marché × portail */}
+      <Card className="flex-1 flex flex-col min-h-0">
+        <div className="text-sm font-semibold mb-2 flex-shrink-0 flex items-center gap-3" style={{ fontFamily: 'Manrope, sans-serif' }}>
+          Détail par marché × portail
+          <span className="text-[10px] font-normal" style={{ color: COLORS.muted }}>
+            · {SEO_MARCHES_PER_PORTAIL.length} sites, source Google Search Console
+          </span>
+        </div>
+        <div className="flex-1 min-h-0 overflow-y-auto">
+          <table className="w-full text-xs">
+            <thead className="sticky top-0" style={{ background: COLORS.surface }}>
+              <tr className="text-[10px] uppercase tracking-wider" style={{ color: COLORS.muted, borderBottom: `1px solid ${COLORS.border}` }}>
+                <th className="text-left py-1.5">Marché</th>
+                <th className="text-left py-1.5">Portail</th>
+                <th className="text-right py-1.5">Mots-clés</th>
+                <th className="text-right py-1.5">Top 3</th>
+                <th className="text-right py-1.5">Top 4-10</th>
+                <th className="text-right py-1.5">Page 2</th>
+                <th className="text-right py-1.5">Non classé</th>
+                <th className="text-right py-1.5">% Page 1</th>
+              </tr>
+            </thead>
+            <tbody style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+              {SEO_MARCHES_PER_PORTAIL.map((r) => {
+                const pctP1Row = r.kw ? (r.top3 + r.top4_10) / r.kw : null;
+                const isEmpty = (r.kw ?? 0) === 0;
+                return (
+                  <tr
+                    key={`${r.marche}-${r.portail}`}
+                    style={{ borderBottom: `1px solid ${COLORS.border}`, opacity: isEmpty ? 0.4 : 1 }}
+                  >
+                    <td className="py-1.5" style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 600 }}>{r.marche}</td>
+                    <td className="py-1.5">
+                      <span className="inline-flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full" style={{ background: PORTAIL_COLORS[r.portail] }} />
+                        <span style={{ color: PORTAIL_COLORS[r.portail], fontFamily: 'Manrope, sans-serif', fontWeight: 500 }}>{r.portail}</span>
+                        <span className="text-[10px]" style={{ color: COLORS.muted }}>{PORTAIL_LABELS[r.portail]}</span>
+                      </span>
+                    </td>
+                    <td className="text-right py-1.5">{fmtFull(r.kw)}</td>
+                    <td className="text-right py-1.5" style={{ color: COLORS.good }}>{fmtFull(r.top3)}</td>
+                    <td className="text-right py-1.5">{fmtFull(r.top4_10)}</td>
+                    <td className="text-right py-1.5" style={{ color: COLORS.warn }}>{fmtFull(r.page2)}</td>
+                    <td className="text-right py-1.5" style={{ color: COLORS.muted }}>{fmtFull(r.nonClasse)}</td>
+                    <td className="text-right py-1.5" style={{ color: pctP1Row == null ? COLORS.muted : pctP1Row >= 0.5 ? COLORS.good : pctP1Row >= 0.3 ? COLORS.warn : COLORS.bad }}>
+                      {fmtPct(pctP1Row, 0)}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </Card>
+    </div>
   );
 };
 
@@ -2542,7 +2702,7 @@ const DataPending = ({ source, reason }) => (
 const SOURCES = [
   { label: 'Piano Analytics',              state: 'ok',      detail: 'Sync API quotidienne',                              syncedAtKey: 'piano' },
   { label: 'Google Ads',                   state: 'missing', detail: 'À connecter via l\'API Google Ads',                  syncedAtKey: null },
-  { label: 'Google Search Console',        state: 'pending', detail: 'Service account en attente d\'accès aux propriétés', syncedAtKey: 'gsc' },
+  { label: 'Google Search Console',        state: 'ok',      detail: 'Sync API (OAuth user) — positions par marché × portail',  syncedAtKey: 'gsc' },
   { label: 'Monitoring Traffic',           state: 'ok',      detail: 'Pack Trafic — scraping nightly 05:00 UTC',           syncedAtKey: 'secureholiday' },
   { label: 'Monitoring Traffic Acquéreur', state: 'ok',      detail: 'Pack Trafic Apporteurs — scraping nightly 05:00 UTC', syncedAtKey: 'secureholiday' },
   { label: 'Monitoring Clic Out',          state: 'ok',      detail: 'Stats Clicks — scraping nightly 05:00 UTC',          syncedAtKey: 'secureholiday' },
@@ -2766,6 +2926,7 @@ export default function App() {
   const PAGES = {
     dashboard: { title: "Vue d'ensemble", subtitle: 'Pilotage consolidé — ctoutvert', component: DashboardPage },
     portails: { title: 'Portails', subtitle: 'Performance trafic par site', component: PortailsPage },
+    seo: { title: 'SEO', subtitle: 'Positions Google Search Console — marché × portail', component: SEOPage },
     sea: { title: 'SEA', subtitle: 'Acquisition payante par marché', component: SEAPage },
     crm: { title: 'CRM', subtitle: 'Base abonnés et email marketing', component: CRMPage },
     performance: { title: 'Performance', subtitle: 'ROI marketing — par mois et par levier', component: PerformancePage },

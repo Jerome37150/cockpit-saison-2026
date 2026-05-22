@@ -4,7 +4,8 @@
 //
 // Sources :
 //   - Piano (`piano.json` → seoMonthly + seoPerPortail) pour trafic + clickouts
-//   - GSC   (`gsc.json`   → perMarket) pour SEO_MARCHES (positions bucketées)
+//   - GSC   (`gsc.json`   → perMarketPerPortail) pour SEO_MARCHES (positions
+//           bucketées, sommées par marché à travers les portails).
 //
 // ⚠️ `volume` (volume de recherche) n'est pas exposé par GSC nativement.
 // Tant qu'aucun tracker tiers (Semrush / SE Ranking) n'est branché, il reste null.
@@ -41,8 +42,37 @@ const buildSeoPerf = () => {
 
 export const SEO_PERF = buildSeoPerf();
 
-export const SEO_MARCHES = gscData.perMarket.map((r) => ({
+// Somme les colonnes numériques par marché à travers les portails GSC.
+// `null` est traité comme absent (pas comme 0) : un marché dont tous les portails
+// ont `volumeRech: null` reste `volume: null`, pas `volume: 0`.
+const sumByMarche = (rows, key) => {
+  const defined = rows.map((r) => r[key]).filter((v) => v != null);
+  return defined.length === 0 ? null : defined.reduce((a, b) => a + b, 0);
+};
+
+export const SEO_MARCHES = (() => {
+  const byMarche = new Map();
+  gscData.perMarketPerPortail.forEach((r) => {
+    if (!byMarche.has(r.marche)) byMarche.set(r.marche, []);
+    byMarche.get(r.marche).push(r);
+  });
+  return Array.from(byMarche.entries()).map(([marche, rows]) => ({
+    marche,
+    kw:        sumByMarche(rows, 'kw'),
+    volume:    sumByMarche(rows, 'volumeRech'),
+    top3:      sumByMarche(rows, 'top3'),
+    top4_10:   sumByMarche(rows, 'top4_10'),
+    page2:     sumByMarche(rows, 'page2'),
+    nonClasse: sumByMarche(rows, 'nonClasse'),
+  }));
+})();
+
+// Granularité (marché × portail) — pour la page SEO d'analyse détaillée.
+// Garde l'ordre d'origine du JSON (qui suit MARCHES × portails de gsc-sites.mjs).
+export const SEO_MARCHES_PER_PORTAIL = gscData.perMarketPerPortail.map((r) => ({
   marche: r.marche,
+  portail: r.portail,
+  snapshotDate: r.snapshotDate,
   kw: r.kw,
   volume: r.volumeRech,
   top3: r.top3,

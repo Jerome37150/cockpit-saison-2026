@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-05-20T18:02:15.408Z",
+  "syncedAt": "2026-05-22T07:42:26.910Z",
   "_about": "Secure Holiday — agrégat généré par scripts/aggregate-secureholiday.mjs depuis les XLSX bruts dans data/raw/secureholiday/. perMonth = volume/CA par mois × type de réservation (Directe = Pack Trafic, Apporteur = Pack Trafic Apporteurs). statsClicks = snapshot du fichier Stats Clicks le plus large (clickouts + budget par engine).",
   "perMonth": [
     {
