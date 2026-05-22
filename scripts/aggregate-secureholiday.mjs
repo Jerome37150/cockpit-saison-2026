@@ -15,10 +15,12 @@
  * ============================================================================
  */
 
-import { readdirSync, statSync, readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readdirSync, statSync, readFileSync, existsSync } from 'node:fs';
 import { resolve, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as XLSX from 'xlsx';
+
+import { writeJsonSource } from './_lib/write-json-source.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW = join(ROOT, 'data', 'raw', 'secureholiday');
@@ -219,8 +221,7 @@ console.log(
 
 // ----- écriture du JSON ------------------------------------------------------
 
-const out = {
-  syncedAt: new Date().toISOString(),
+const payload = {
   _about:
     'Secure Holiday — agrégat généré par scripts/aggregate-secureholiday.mjs depuis les XLSX bruts dans data/raw/secureholiday/. ' +
     'perMonth = volume/CA par mois × type de réservation (Directe = Pack Trafic, Apporteur = Pack Trafic Apporteurs). ' +
@@ -231,6 +232,6 @@ const out = {
   statsClicks,
 };
 
-mkdirSync(dirname(OUT), { recursive: true });
-writeFileSync(OUT, JSON.stringify(out, null, 2), 'utf8');
-console.log(`[sh-agg] → ${OUT} (${(JSON.stringify(out).length / 1024).toFixed(1)} Ko)`);
+const { dataChangedAt, changed } = await writeJsonSource(OUT, payload);
+console.log(`[sh-agg] → ${OUT} (${(JSON.stringify(payload).length / 1024).toFixed(1)} Ko)`);
+console.log(`[sh-agg] ${changed ? 'data MISE À JOUR' : 'data inchangée'} (dataChangedAt: ${dataChangedAt})`);

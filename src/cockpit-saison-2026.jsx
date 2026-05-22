@@ -26,6 +26,8 @@ import {
   CLIENTS,
   SYNCED_AT,
   SYNCED_AT_BY_SOURCE,
+  DATA_CHANGED_AT,
+  DATA_CHANGED_AT_BY_SOURCE,
 } from './data';
 import { ACTIVE_MONTHS, COCKPIT_YEAR, monthOfIso, isoMonthsBetween, shiftYMByYears, formatPeriodLabel } from './data/shared/constants.js';
 
@@ -135,9 +137,9 @@ const Sidebar = ({ active, setActive, onLogout }) => {
             <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: COLORS.primary }} />
             <span>Sources synchronisées</span>
           </div>
-          {SYNCED_AT && (
+          {DATA_CHANGED_AT && (
             <div className="text-[11px]" style={{ color: COLORS.muted }}>
-              Sync : {new Date(SYNCED_AT).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}
+              Données à jour : {new Date(DATA_CHANGED_AT).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}
             </div>
           )}
         </button>
@@ -2761,7 +2763,7 @@ const SourcesModal = ({ onClose }) => {
         <div className="space-y-2 max-h-[60vh] overflow-y-auto pr-1">
           {SOURCES.map((src) => {
             const cfg = STATUS_COLORS[src.state] ?? STATUS_COLORS.missing;
-            const ts = src.syncedAtKey ? SYNCED_AT_BY_SOURCE?.[src.syncedAtKey] : null;
+            const ts = src.syncedAtKey ? DATA_CHANGED_AT_BY_SOURCE?.[src.syncedAtKey] : null;
             return (
               <div
                 key={src.label}
@@ -2810,7 +2812,7 @@ const SourcesModal = ({ onClose }) => {
 
 const SourcesInfoButton = () => {
   const [open, setOpen] = useState(false);
-  const entries = Object.entries(SYNCED_AT_BY_SOURCE);
+  const entries = Object.entries(DATA_CHANGED_AT_BY_SOURCE);
   const show = () => setOpen(true);
   const hide = () => setOpen(false);
   return (

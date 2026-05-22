@@ -28,13 +28,13 @@
  * ============================================================================
  */
 
-import { writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import { config as loadEnv } from 'dotenv';
 import { google } from 'googleapis';
 
 import { GSC_SITES } from './gsc-sites.mjs';
+import { writeJsonSource } from './_lib/write-json-source.mjs';
 
 loadEnv();
 
@@ -128,14 +128,12 @@ async function main() {
     }
   }
 
-  const output = {
-    syncedAt: new Date().toISOString(),
+  const { dataChangedAt, changed } = await writeJsonSource(OUTPUT, {
     _about: 'Google Search Console — généré par scripts/sync-gsc.mjs',
     perMarketPerPortail,
-  };
-
-  await writeFile(OUTPUT, JSON.stringify(output, null, 2) + '\n');
+  });
   console.log(`[sync-gsc] OK → ${OUTPUT}`);
+  console.log(`           ${changed ? 'data MISE À JOUR' : 'data inchangée'} (dataChangedAt: ${dataChangedAt})`);
 }
 
 main().catch((err) => {

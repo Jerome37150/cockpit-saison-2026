@@ -15,4 +15,9 @@ export { SEA_PERF, SEA_PAYS, SEA_CAMPAGNES } from './aggregators/sea.js';
 export { CRM_BASE, CRM_NL, CRM_LANGUE, CRM_CAMPAGNES } from './aggregators/crm.js';
 export { BUDGET_LEVIERS, CA_PRODUITS, CAMPINGS } from './aggregators/budget.js';
 export { CLIENTS } from './aggregators/clients.js';
-export { SYNCED_AT, SYNCED_AT_BY_SOURCE } from './aggregators/meta.js';
+export {
+  SYNCED_AT,
+  SYNCED_AT_BY_SOURCE,
+  DATA_CHANGED_AT,
+  DATA_CHANGED_AT_BY_SOURCE,
+} from './aggregators/meta.js';

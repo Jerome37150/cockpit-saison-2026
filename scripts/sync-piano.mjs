@@ -23,10 +23,11 @@
  * ============================================================================
  */
 
-import { writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import { config as loadEnv } from 'dotenv';
+
+import { writeJsonSource } from './_lib/write-json-source.mjs';
 
 loadEnv();
 
@@ -421,8 +422,7 @@ async function main() {
   const seo = await fetchSeo();
   const seaByCountry = await fetchSeaByCountry();
 
-  const output = {
-    syncedAt: new Date().toISOString(),
+  const payload = {
     _about: 'Piano Analytics — généré par scripts/sync-piano.mjs',
     perPortail,
     byChannel,
@@ -431,8 +431,9 @@ async function main() {
     seaByCountry,
   };
 
-  await writeFile(OUTPUT, JSON.stringify(output, null, 2) + '\n');
+  const { dataChangedAt, changed } = await writeJsonSource(OUTPUT, payload);
   console.log(`[sync-piano] OK → ${OUTPUT}`);
+  console.log(`             ${changed ? 'data MISE À JOUR' : 'data inchangée'} (dataChangedAt: ${dataChangedAt})`);
   console.log(`             perPortail:    ${perPortail.length} lignes`);
   console.log(`             byChannel:     ${byChannel.length} lignes`);
   console.log(`             seoMonthly:    ${seo.monthly.length} lignes`);

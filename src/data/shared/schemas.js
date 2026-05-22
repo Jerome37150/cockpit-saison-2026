@@ -10,6 +10,10 @@ const isoMois = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'mois doit être au form
 const optionalNumber = z.number().nullable();
 const meta = {
   syncedAt: z.string().nullable(),
+  // dataChangedAt : dernier moment où le CONTENU a réellement changé (set par
+  // scripts/_lib/write-json-source.mjs via hash). Affiché par la UI à la place
+  // de syncedAt pour refléter la fraîcheur réelle des données.
+  dataChangedAt: z.string().nullable().optional(),
   _about: z.string().optional(),
 };
 
